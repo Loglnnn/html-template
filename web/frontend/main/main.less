@@ -1,0 +1,339 @@
+/*
+ * Главное:
+ *      https://github.com/cronfy/html-template/blob/master/docs/README.md
+ *
+ * О файлах стилей:
+ *      Расположение CSS, JS, картинок:
+ *      https://github.com/cronfy/html-template/blob/master/docs/file-structure.md
+ *      Требования к именованию классов и структуре CSS:
+ *      https://github.com/cronfy/html-template/blob/master/docs/css-structure-and-naming.md
+ *
+ * Стили конкретной страницы: apps/main/views/template/example.php
+ */
+
+.page__main { 
+  padding: 0px 20px;
+  font-family: "Ubuntu";
+  font-size: 14px;
+  
+  .newline {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+  
+  .main-banner-wrap {
+    position: relative;
+    margin: 0px -20px;
+    
+    .main-banner {
+      height: 398px;
+      
+      @media screen and (min-width: 1000px) {
+        height: 480px;
+      }
+      
+      h1 {
+        color: white;
+        font-size: 32px;
+        font-weight: bold;
+      }
+      .btn-container {
+        bottom: 40px;
+        
+        @media screen and (min-width: 768px) {
+          bottom: 200px;
+          left: 255px;
+          right: 255px;
+        }
+      }
+    }
+    .buttons {
+      padding: 0px 20px;
+      margin-bottom: 30px;
+      
+      @media screen and (min-width: 768px) {
+        position: absolute;
+        bottom: 36px;
+        margin-bottom: 0;
+        text-align: center;
+        width: 100%;
+      }
+      
+      a {
+        padding: 0px 22px 0px 68px;
+        display: block;
+        color: #333;
+        font-weight: bold;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        text-transform: uppercase;
+        height: 53px;
+        margin: 5px 0px;
+        position: relative; 
+        
+        @media screen and (min-width: 768px) {
+          display: inline-block;
+          margin-left: 20px;
+          color: white;
+          
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+        
+        &.business:before, &.book:before, &.home:before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 32px;
+          height: 53px;
+          left: 19px;
+        }
+        
+        &.business:before {
+          background: url("./business.svg") no-repeat;
+          background-position: center;
+        }
+        &.book:before {
+          background: url("./book.svg") no-repeat;
+          background-position: center;
+        }
+        &.home:before {
+          background: url("./home.svg") no-repeat;
+          background-position: center;
+        }
+      }
+    }
+  }
+  
+  .banners-row {
+    margin: 0px -20px;
+  
+    @media screen and (min-width: 768px) {
+      overflow: hidden;
+      margin: 0px -20px;
+    }
+    
+    .wrapper {
+      margin-top: 2px;
+      @media screen and (min-width: 768px) {
+        float: left;
+        width: 50%;
+        
+        &:nth-child(2n+1) {
+          padding-right: 1px;
+        }
+        
+        &:nth-child(2n) {
+          padding-left: 1px;
+        }
+      }
+ 
+      .second-banner {
+        height: 314px;
+        
+        @media screen and (min-width: 480px) {
+          height: 471px;
+        }
+        
+        @media screen and (min-width: 768px) {
+          height: 376px;
+        }
+        
+        @media screen and (min-width: 768px) {
+          height: 490px;
+        }
+        
+        h1 {
+          font-size: 28px;
+          color: #333;
+          top: 20px;
+        }
+        
+        .btn-container {
+          bottom: 40px;
+          
+          @media screen and (min-width: 768px) {
+            left: 49px;
+            right: 49px;
+          }
+        }
+      }
+    }
+  }
+  .pluses-wrapper {
+    margin: 0px -20px;
+    padding: 30px 20px 40px;
+    background-color: #f7f7f7;
+    
+    @media screen and (min-width: 480px) {
+      & {
+        padding: 30px 87px 40px;
+      }
+    }
+    
+    @media screen and (min-width: 768px) {
+      padding: 0px 20px;
+    }
+    
+    ul.pluses {
+      list-style: none;
+      padding: 0px;
+      color: #333;
+      font-size: 20px;
+      padding-left: 85px;
+      display: block;
+      
+      @media screen and (min-width: 768px) {
+        padding: 0px;
+        overflow: hidden;
+      }
+      
+      & > li {
+        position: relative;
+        height: 80px;
+        margin: 20px 0px;
+        
+        @media screen and (min-width: 768px) {
+          float: left;
+          width: 50%;
+          padding-left: 130px;
+        }
+        
+        &:before {
+          @media screen and (min-width: 768px) {
+            left: 31px;
+          }
+          
+          content: "";
+          position: absolute;
+          display: block;
+          height: 80px;
+          width: 80px;
+          left: -85px;
+          border: 2px solid #00ad92;
+          border-radius: 80px;
+          background-color: white;
+        }
+      }
+    }
+  }
+  .most-populars {
+    padding-top: 45px;
+    padding-bottom: 30px;
+    text-align: center;
+    
+    @media screen and (min-width: 480px) {
+      overflow: hidden;
+    }
+    
+    .photo-card-list {
+      .photo-card {
+        font-size: 16px;
+        margin-top: 30px;
+        
+        @media screen and (min-width: 480px) {
+          float: left;
+          width: 50%;
+          
+          &:nth-child(2n) {
+            padding-left: 5px;
+          }
+          
+          &:nth-child(2n+1) {
+            padding-right: 5px;
+          }
+        }
+        /* TODO height when two or more lines */
+        @media screen and (min-width: 768px) {
+          width: 33%;
+          
+          &:nth-child(2n) {
+            padding-left: 0px;
+          }
+          
+          &:nth-child(2n+1) {
+            padding-right: 0px;
+          }
+          
+          &:nth-child(3n+1) {
+            padding-right: 10px;
+          }
+          
+          &:nth-child(3n+2) {
+            padding-left: 5px;
+            padding-right: 5px;
+          }
+          
+          &:nth-child(3n+3) {
+            padding-left: 10px;
+          }
+        }
+        
+        @media screen and (min-width: 1000px) {
+          width: 25%;
+          
+          &:nth-child(3n+1) {
+            padding-right: 0px;
+          }
+          
+          &:nth-child(3n+2) {
+            padding-left: 0px;
+            padding-right: 0px;
+          }
+          
+          &:nth-child(3n+3) {
+            padding-left: 0px;
+          }
+          
+          &:nth-child(4n+1) {
+            padding-right: 14px;
+          }
+          
+          &:nth-child(4n+2), &:nth-child(4n+3) {
+            padding-right: 7px;
+            padding-left: 7px;
+          }
+          
+          &:nth-child(4n+4) {
+            padding-left: 7px;
+          }
+          
+        }
+        
+        img {
+          display: block;
+          width: 100%;
+          box-shadow: rgba(0,0,0, 0.17) 0px 2px 4px 0px;
+        }
+        
+        h2 {
+          color: #333;
+          font-size: 16px;
+        }
+        .articul {
+          color: #999; 
+        }
+      }
+    }
+  }
+  .seotext {
+    padding: 30px 20px 40px;
+    margin: 0px -20px;
+    background-color: #f7f7f7;
+    
+    h1 {
+      font-size: 28px;
+      font-weight: light;
+      text-align: center;
+      color: #333;
+    }
+    p {
+      text-align: left;
+      font-size: 16px;
+      color: #333;
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,322 @@
+/*
+ * Главное:
+ *      https://github.com/cronfy/html-template/blob/master/docs/README.md
+ *
+ * О файлах стилей:
+ *      Расположение CSS, JS, картинок:
+ *      https://github.com/cronfy/html-template/blob/master/docs/file-structure.md
+ *      Требования к именованию классов и структуре CSS:
+ *      https://github.com/cronfy/html-template/blob/master/docs/css-structure-and-naming.md
+ *
+ * Стили конкретной страницы: apps/main/views/template/example.php
+ */
+.page__main {
+  padding: 0px 20px;
+  font-family: "Ubuntu";
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .page__main .newline {
+    display: none;
+  }
+}
+.page__main .main-banner-wrap {
+  position: relative;
+  margin: 0px -20px;
+}
+.page__main .main-banner-wrap .main-banner {
+  height: 398px;
+}
+@media screen and (min-width: 1000px) {
+  .page__main .main-banner-wrap .main-banner {
+    height: 480px;
+  }
+}
+.page__main .main-banner-wrap .main-banner h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+.page__main .main-banner-wrap .main-banner .btn-container {
+  bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .page__main .main-banner-wrap .main-banner .btn-container {
+    bottom: 200px;
+    left: 255px;
+    right: 255px;
+  }
+}
+.page__main .main-banner-wrap .buttons {
+  padding: 0px 20px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .page__main .main-banner-wrap .buttons {
+    position: absolute;
+    bottom: 36px;
+    margin-bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+.page__main .main-banner-wrap .buttons a {
+  padding: 0px 22px 0px 68px;
+  display: block;
+  color: #333;
+  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  text-transform: uppercase;
+  height: 53px;
+  margin: 5px 0px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .page__main .main-banner-wrap .buttons a {
+    display: inline-block;
+    margin-left: 20px;
+    color: white;
+  }
+  .page__main .main-banner-wrap .buttons a:first-child {
+    margin-left: 0;
+  }
+}
+.page__main .main-banner-wrap .buttons a.business:before,
+.page__main .main-banner-wrap .buttons a.book:before,
+.page__main .main-banner-wrap .buttons a.home:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 53px;
+  left: 19px;
+}
+.page__main .main-banner-wrap .buttons a.business:before {
+  background: url("business.svg") no-repeat;
+  background-position: center;
+}
+.page__main .main-banner-wrap .buttons a.book:before {
+  background: url("book.svg") no-repeat;
+  background-position: center;
+}
+.page__main .main-banner-wrap .buttons a.home:before {
+  background: url("home.svg") no-repeat;
+  background-position: center;
+}
+.page__main .banners-row {
+  margin: 0px -20px;
+}
+@media screen and (min-width: 768px) {
+  .page__main .banners-row {
+    overflow: hidden;
+    margin: 0px -20px;
+  }
+}
+.page__main .banners-row .wrapper {
+  margin-top: 2px;
+}
+@media screen and (min-width: 768px) {
+  .page__main .banners-row .wrapper {
+    float: left;
+    width: 50%;
+  }
+  .page__main .banners-row .wrapper:nth-child(2n+1) {
+    padding-right: 1px;
+  }
+  .page__main .banners-row .wrapper:nth-child(2n) {
+    padding-left: 1px;
+  }
+}
+.page__main .banners-row .wrapper .second-banner {
+  height: 314px;
+}
+@media screen and (min-width: 480px) {
+  .page__main .banners-row .wrapper .second-banner {
+    height: 471px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__main .banners-row .wrapper .second-banner {
+    height: 376px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__main .banners-row .wrapper .second-banner {
+    height: 490px;
+  }
+}
+.page__main .banners-row .wrapper .second-banner h1 {
+  font-size: 28px;
+  color: #333;
+  top: 20px;
+}
+.page__main .banners-row .wrapper .second-banner .btn-container {
+  bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .page__main .banners-row .wrapper .second-banner .btn-container {
+    left: 49px;
+    right: 49px;
+  }
+}
+.page__main .pluses-wrapper {
+  margin: 0px -20px;
+  padding: 30px 20px 40px;
+  background-color: #f7f7f7;
+}
+@media screen and (min-width: 480px) {
+  .page__main .pluses-wrapper {
+    padding: 30px 87px 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__main .pluses-wrapper {
+    padding: 0px 20px;
+  }
+}
+.page__main .pluses-wrapper ul.pluses {
+  list-style: none;
+  padding: 0px;
+  color: #333;
+  font-size: 20px;
+  padding-left: 85px;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .page__main .pluses-wrapper ul.pluses {
+    padding: 0px;
+    overflow: hidden;
+  }
+}
+.page__main .pluses-wrapper ul.pluses > li {
+  position: relative;
+  height: 80px;
+  margin: 20px 0px;
+}
+@media screen and (min-width: 768px) {
+  .page__main .pluses-wrapper ul.pluses > li {
+    float: left;
+    width: 50%;
+    padding-left: 130px;
+  }
+}
+.page__main .pluses-wrapper ul.pluses > li:before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 80px;
+  width: 80px;
+  left: -85px;
+  border: 2px solid #00ad92;
+  border-radius: 80px;
+  background-color: white;
+}
+@media screen and (min-width: 768px) {
+  .page__main .pluses-wrapper ul.pluses > li:before {
+    left: 31px;
+  }
+}
+.page__main .most-populars {
+  padding-top: 45px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+@media screen and (min-width: 480px) {
+  .page__main .most-populars {
+    overflow: hidden;
+  }
+}
+.page__main .most-populars .photo-card-list .photo-card {
+  font-size: 16px;
+  margin-top: 30px;
+  /* TODO height when two or more lines */
+}
+@media screen and (min-width: 480px) {
+  .page__main .most-populars .photo-card-list .photo-card {
+    float: left;
+    width: 50%;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(2n) {
+    padding-left: 5px;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(2n+1) {
+    padding-right: 5px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__main .most-populars .photo-card-list .photo-card {
+    width: 33%;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(2n) {
+    padding-left: 0px;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(2n+1) {
+    padding-right: 0px;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(3n+1) {
+    padding-right: 10px;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(3n+2) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(3n+3) {
+    padding-left: 10px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .page__main .most-populars .photo-card-list .photo-card {
+    width: 25%;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(3n+1) {
+    padding-right: 0px;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(3n+2) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(3n+3) {
+    padding-left: 0px;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(4n+1) {
+    padding-right: 14px;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(4n+2),
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(4n+3) {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+  .page__main .most-populars .photo-card-list .photo-card:nth-child(4n+4) {
+    padding-left: 7px;
+  }
+}
+.page__main .most-populars .photo-card-list .photo-card img {
+  display: block;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px 2px 4px 0px;
+}
+.page__main .most-populars .photo-card-list .photo-card h2 {
+  color: #333;
+  font-size: 16px;
+}
+.page__main .most-populars .photo-card-list .photo-card .articul {
+  color: #999;
+}
+.page__main .seotext {
+  padding: 30px 20px 40px;
+  margin: 0px -20px;
+  background-color: #f7f7f7;
+}
+.page__main .seotext h1 {
+  font-size: 28px;
+  font-weight: light;
+  text-align: center;
+  color: #333;
+}
+.page__main .seotext p {
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  margin-top: 20px;
+}
