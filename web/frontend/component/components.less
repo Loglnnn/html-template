@@ -26,6 +26,33 @@
 }
  */
 
+ul.c__breadcrumbs {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  
+  & > li {
+    display: inline;
+    color: #00ad92;
+    font-size: 18px;
+    
+    &:after {
+      content: "/";
+      margin: 0px 5px;
+      color: gray; /* TODO */
+    }
+    
+    &:last-child:after {
+      content: initial;
+    }
+    
+    .h1 {
+      font-size: 28px;
+      color: #000;
+    }
+  }
+}
+ 
 .c__banner {
   position: relative;
   

@@ -23,6 +23,29 @@
     ...
 }
  */
+ul.c__breadcrumbs {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+ul.c__breadcrumbs > li {
+  display: inline;
+  color: #00ad92;
+  font-size: 18px;
+}
+ul.c__breadcrumbs > li:after {
+  content: "/";
+  margin: 0px 5px;
+  color: gray;
+  /* TODO */
+}
+ul.c__breadcrumbs > li:last-child:after {
+  content: initial;
+}
+ul.c__breadcrumbs > li .h1 {
+  font-size: 28px;
+  color: #000;
+}
 .c__banner {
   position: relative;
 }
