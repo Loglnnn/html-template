@@ -4,25 +4,6 @@
  * Подробнее о компонентах: https://github.com/cronfy/html-template/blob/master/docs/components.md
  * Общая документация: https://github.com/cronfy/html-template/blob/master/docs/README.md
  */
-/*
- * Стили для хлебных крошек могут быть такими:
- */
-/*
-.c__breadcrumbs .item {
-    display: ...;
-    color: ...;
-    margin: ...;
-}
-.c__breadcrumbs .item.active {
-    color: ...;
-}
-
-.c__breadcrumbs .item + .item::before {
-    content: '/';
-    display: inline-block;
-    ...
-}
- */
 ul.c__breadcrumbs {
   list-style: none;
   text-align: center;
@@ -30,7 +11,6 @@ ul.c__breadcrumbs {
 }
 ul.c__breadcrumbs > li {
   display: inline;
-  color: #00ad92;
   font-size: 18px;
 }
 ul.c__breadcrumbs > li:after {
@@ -42,7 +22,10 @@ ul.c__breadcrumbs > li:after {
 ul.c__breadcrumbs > li:last-child:after {
   content: initial;
 }
-ul.c__breadcrumbs > li .h1 {
+ul.c__breadcrumbs > li a {
+  color: #00ad92;
+}
+ul.c__breadcrumbs > li h1 {
   font-size: 28px;
   color: #000;
 }

@@ -1,0 +1,284 @@
+/*
+ * Главное:
+ *      https://github.com/cronfy/html-template/blob/master/docs/README.md
+ *
+ * О файлах стилей:
+ *      Расположение CSS, JS, картинок:
+ *      https://github.com/cronfy/html-template/blob/master/docs/file-structure.md
+ *      Требования к именованию классов и структуре CSS:
+ *      https://github.com/cronfy/html-template/blob/master/docs/css-structure-and-naming.md
+ *
+ * Стили конкретной страницы: apps/main/views/template/example.php
+ */
+
+.page__item {
+  font-family: "Ubuntu";
+  padding: 0px 20px;
+  
+  /* возможно не лучший выбор */
+  h1 {
+    font-size: 28px;
+    font-weight: normal;
+    text-align: center;
+  }
+  
+  .card {
+    .preview {
+      margin: 0px -20px;
+      
+      @media screen and (min-width: 768px) {
+        margin: 0;
+      }
+      
+      img {
+        width: 100%;
+      }
+    }
+    
+    ul.tags {
+      list-style: none;
+      overflow: hidden;
+      padding: 0;
+      
+      @media screen and (min-width: 480px) {
+        float: left;
+      }
+      
+      & > li {
+        display: block;
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 19px;
+        margin-right: 10px;
+        margin-top: 10px;
+        
+        border: 1px solid #abe4db;
+        font-size: 16px;
+        
+        a {
+          color: #00ad92;
+        }
+      }
+    }
+    
+    .articul {
+      color: #999;
+      font-size: 18px;
+      
+      @media screen and (min-width: 480px) {
+        float: right;
+      }
+    }
+    
+    .dim_input {
+      margin: 0px -20px;
+      padding: 0px 20px;
+      background-color: #f7f7f7;
+      overflow: hidden;
+      
+      @media screen and (min-width: 480px) {
+        clear: both;
+      }
+      
+      @media screen and (min-width: 768px) {
+        margin: 0;
+      }
+      
+      .input_container {
+        float: left;
+        width: 50%;
+        
+        label {
+          display: block;
+          width: 100%;
+          color: #333;
+          font-size: 18px;
+        }
+        
+        input[type="text"] {
+          /*display: block;*/
+          width: 100%;
+          font-size: 16px;
+          border: 1px solid #e0e0e0;
+          padding: 0 45px 0 10px;
+          height: 50px;
+          line-height: 50px;
+          font-size: 18px;
+          
+          &.left {
+            border-radius: 5px 0 0 5px;
+          }
+          
+          &.right {
+            border-radius: 0 5px 5px 0;
+          }
+        }
+        
+        .length-input {
+          position: relative;
+          
+          &:after {
+            content: "см";
+            display: block;
+            line-height: 48px;
+            color: #bbb;
+            position: absolute;
+            right: 20px;
+            top: 0px;
+          }
+        }
+      }
+    }
+    
+    .material-list {
+      padding-top: 30px;
+    
+      & > ul {
+        list-style: none;
+        overflow: hidden;
+        margin: 0px -20px;
+        padding: 0;
+        
+        @media screen and (min-width: 768px) {
+          margin: 0;
+        }
+        
+        & > li {
+          display: block;
+          float: left;
+          width: 33%;
+          
+          @media screen and (min-width: 480px) {
+            width: 25%;
+          }
+          
+          @media screen and (min-width: 768px) {
+            width: 12.5%;
+          }
+          
+          .img-wrap {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            
+            &:before {
+              content: "";
+              padding-top: 100%;
+              float: left;
+            }
+          
+          /* //TOOD разобрать это все */
+          
+            img {
+              /*width: 100%;
+              height: 100%;
+              */
+              position: absolute;
+              top: -100%;
+              bottom: -100%;
+              left: -100%;
+              right: -100%;
+              margin: auto;
+              min-width: 100%;
+              max-height: 110%;
+            }
+          }
+          
+          div {
+            text-align: center;
+          }
+        }
+      }
+      
+      .price {
+        text-align: center;
+        font-size: 32px;
+        color: #000;
+        
+        .old {
+          font-size: 24px;
+          color: #999;
+          text-decoration: line-through;
+        }
+      }
+    }
+    
+    .form {
+      h1 {
+        font-size: 28px;
+        font-weight: normal;
+        color: #333;
+      }
+      
+      .call {
+        text-align: center;
+        font-size: 16px;
+        color: #999;
+      }
+      
+      .fields {
+        margin: 0px -20px;
+        padding: 0px 20px;
+        background-color: #f7f7f7;
+        @media screen and (min-width: 768px) {
+          margin: 0;
+        }
+      
+        .field {
+          &.centered {
+            text-align: center;
+          }
+        
+          @media screen and (min-width: 768px) {
+            &.half-lg {
+              width: 50%;
+              float: left;
+            }
+          }
+        
+          label {
+            display: block;
+            color: #999;
+            font-size: 18px;
+            font-weight: normal;
+            
+            &.inline {
+              display: inline;
+            }
+          }
+          
+          input[type="text"], select {
+            display: block;
+            width: 100%;
+            height: 50px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            line-height: 50px;
+            font-size: 18px;
+            padding: 0px 10px;
+          }
+          
+          input[type="checkbox"] {
+            
+          }
+        }
+      }
+    }
+    
+    .delivery-places {
+      text-align: center;
+      
+      .city {
+        font-size: 16px;
+        color: #00ad92;
+      }
+      
+      .map {
+        margin: 0px -20px;
+        height: 200px;
+        border: 1px solid black;
+      }
+    }
+  }
+}
