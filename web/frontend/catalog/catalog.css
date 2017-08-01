@@ -1,0 +1,74 @@
+/*
+ * Главное:
+ *      https://github.com/cronfy/html-template/blob/master/docs/README.md
+ *
+ * О файлах стилей:
+ *      Расположение CSS, JS, картинок:
+ *      https://github.com/cronfy/html-template/blob/master/docs/file-structure.md
+ *      Требования к именованию классов и структуре CSS:
+ *      https://github.com/cronfy/html-template/blob/master/docs/css-structure-and-naming.md
+ *
+ * Стили конкретной страницы: apps/main/views/template/example.php
+ */
+.page__catalog {
+  font-family: "Ubuntu";
+  font-size: 14px;
+  padding: 0px 20px;
+}
+.page__catalog .description {
+  position: relative;
+}
+.page__catalog .description .img-wrap {
+  margin: 0px -20px;
+}
+.page__catalog .description .img-wrap img {
+  width: 100%;
+}
+.page__catalog .description .text-wrap {
+  position: absolute;
+  top: 0;
+  background-color: white;
+}
+.page__catalog .photo-cards-wrap {
+  overflow: hidden;
+}
+.page__catalog .photo-cards-wrap .photo-card img {
+  width: 100%;
+}
+.page__catalog .photo-cards-wrap .photo-card.fullwidth {
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .page__catalog .photo-cards-wrap .photo-card.fullwidth {
+    width: 50%;
+    float: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__catalog .photo-cards-wrap .photo-card.fullwidth {
+    width: 33%;
+    float: left;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .page__catalog .photo-cards-wrap .photo-card.fullwidth {
+    width: 25%;
+    float: left;
+  }
+}
+.page__catalog .photo-cards-wrap .photo-card.col-2 {
+  width: 50%;
+  float: left;
+}
+@media screen and (min-width: 768px) {
+  .page__catalog .photo-cards-wrap .photo-card.col-2 {
+    width: 33%;
+    float: left;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .page__catalog .photo-cards-wrap .photo-card.col-2 {
+    width: 25%;
+    float: left;
+  }
+}
