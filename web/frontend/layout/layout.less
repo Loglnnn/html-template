@@ -1,0 +1,717 @@
+/*
+ * Главное:
+ *      https://github.com/cronfy/html-template/blob/master/docs/README.md
+ *
+ * О файлах стилей:
+ *      Расположение CSS, JS, картинок:
+ *      https://github.com/cronfy/html-template/blob/master/docs/file-structure.md
+ *      Требования к именованию классов и структуре CSS:
+ *      https://github.com/cronfy/html-template/blob/master/docs/css-structure-and-naming.md
+ *
+ * Стили общего шаблона: apps/main/views/layouts/layout.php
+ */
+
+/* Исключение из правила про изоляцию CSS. Здесь можно указать основные умолчания. */
+body {
+    /* шрифт, цвет... */
+}
+
+/* TODOs
+ Ubuntu Light
+ Цвет некоторых картинок и svg
+ Использование svg
+*/
+
+/* 1.header */
+
+
+
+.l__header {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif; 
+  font-size: 14px;
+  padding: 0px 20px;
+  
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+  
+  .subheader {
+    overflow: hidden;
+  
+  
+    @media screen and (min-width: 480px) {
+      height: 70px;
+    }
+    
+    @media screen and (min-width: 768px) {
+      overflow: hidden;
+    }
+    
+    .logo {
+      display: block;
+      margin: 13px auto 20px;
+      
+      @media screen and (min-width: 480px) {
+        float: left;
+        margin: 0px;
+        margin-top: 20px;
+        margin-right: 15px;
+      }
+      /* TODO logo size on all screens */
+      @media screen and (min-width: 1000px) {
+        width: 227px;
+        height: 42px;
+      }
+    }
+    
+    .search {
+      position: relative;
+      float: left;
+      min-width: 109px;
+      width: 40%;
+      width: ~"calc(100% - 190px)";
+      height: 42px;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-right: 15px;
+      margin-bottom: 20px;
+      
+      @media screen and (min-width: 480px) {
+        width: 25%;
+        width: ~"calc(100% - 330px)";
+        margin-bottom: 0px;
+        margin-top: 15px;
+      }
+      
+      @media screen and (min-width: 768px) {
+        width: 53%;
+        width: ~"calc(100% - 350px)";
+      }
+      /* TODO search block width on all screens */
+      @media screen and (min-width: 1000px) {
+        width: 27%;
+        width: ~"calc(100% - 680px)";
+      }
+      
+      &:before {
+        content: "";
+        width: 12px;
+        height: 13px;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        background: url("./search.svg") no-repeat;
+      }
+      
+      input[type="text"] {
+        border: none;
+        width: 100%;
+        height: 100%;
+        background-color: #ececec;
+        color: #666;
+        text-indent: 35px;
+      }
+    }
+    .contacts {
+      float: right;
+      margin-right: 10px;
+      
+      @media screen and (min-width: 480px) {
+        margin-right: 0px;
+        margin-top: 10px;
+      }
+      
+      
+      @media screen and (min-width: 1000px) {
+        overflow: hidden;
+        margin-top:0;
+        line-height: 70px;
+      }
+      
+      .city {
+        color: #000;
+        
+        &:after {
+          content: "";
+          background: url("./arrow-down-gray.svg") no-repeat;
+          width: 11px;
+          height: 5px;
+          display: inline-block;
+          margin-left: 8px;
+          margin-bottom: 2px;
+        }
+        
+        @media screen and (min-width: 1000px) {
+          float: left;
+          margin-right: 40px;
+        }
+        
+      }
+      
+      .phone {
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+        
+        @media screen and (min-width: 1000px) {
+          float: left;
+          font-size: 31px;
+        }
+      }
+    }
+  }
+  
+  .navbar {
+    height: 70px;
+    line-height: 70px;
+    background-color: #00ad92;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0px -20px;
+    padding: 0px 20px;
+    border: none;
+    border-radius: 0px;
+    position: relative;
+    
+    
+    
+    .menu-wrap {
+      float: left;
+      
+      .mobile-header {
+        display: block;
+        height: 100%;
+        color: white;
+        padding: 0;
+        text-transform: uppercase;
+        text-decoration: none;
+  
+        &:before {
+          content: "";
+          background: url("./menu.png") no-repeat;
+          width: 19px;
+          height: 12px;
+          line-height: 12px;
+          display: inline-block;
+          margin-right: 13px;
+          vertical-align: -1px;
+        }
+        
+        @media screen and (min-width: 1000px) {
+          display: none;
+        }
+      }
+
+      ul.menu {
+        left: 0px;
+        list-style: none;
+        position: absolute;
+        display: none;
+        z-index: 10; /* выводим поверх страницы */
+        width: 100%;
+        background-color: #00977f;
+        text-align: left;
+        padding: 0px;
+        margin: 0px;
+        
+        &.opened {
+          display: block;
+        }
+        
+        @media screen and (min-width: 1000px) {
+          list-style: none;
+          position: static;
+          display: block;
+          background-color: inherit;
+        }
+        
+        /* TODO arrows at all*/
+        & > li {
+          border-top: solid 1px #1c8675;
+          padding: 0px 20px;
+          min-height: 50px;
+          line-height: 50px;
+          font-size: 16px;
+          
+          @media screen and (min-width: 1000px) {
+            border: none;
+            display: block;
+            float: left;
+            padding: 0;
+            margin-right: 20px;
+            height: 70px;
+            line-height: 70px;
+          }
+          
+          &:first-child {
+            border: none;
+          }
+          
+          &.submenu {
+            padding: 0;
+            
+            &:hover {
+              .submenu {
+                @media screen and (min-width: 1000px) {
+                  display: block;
+                }
+              }
+            }
+            
+            @media screen and (min-width: 1000px) {
+              position: relative;
+            }
+          }
+          
+          & > a {
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+          }
+          
+          & > .submenu-header {
+            display: block;
+            padding: 0px 20px;
+            
+            &.opened {
+              background-color: #1c8675;
+              @media screen and (min-width: 1000px) {
+                background-color: inherit;
+              }
+            }
+            
+            @media screen and (min-width: 1000px) {
+              display: inline;
+              padding: 0;
+            }
+          }
+          
+          & > ul.submenu {
+            display: none;
+            list-style: none;
+            font-family: "Ubuntu"; /* TODO light */
+            font-size: 16px;
+            font-weight: normal;
+            text-transform: none;
+            background-color: #1c8675;
+            padding: 0 0 10px;
+            
+            @media screen and (min-width: 1000px) {
+              left: -24px;
+              background-color: white;
+              border-radius: 5px;
+              border: 1px solid #00ad92;
+              box-shadow: rgba(0,0,0,0.15) 0px 17px 24px 0px;
+              padding: 20px 25px;
+              white-space: nowrap;
+            }
+            
+            &.opened {
+              display: block;
+              
+              @media screen and (min-width: 1000px) {
+                display: none;
+              }
+            }
+            
+            @media screen and (min-width: 1000px) {
+              position: absolute;
+              top: 50px;
+              z-index: 10; /* поверх страницы */
+            }
+            
+            & > li {
+              padding: 0px 20px;
+              height: 34px;
+              line-height: 34px;
+              
+              @media screen and (min-width: 1000px) {
+                line-height: 28px;
+                height: 28px;
+                padding: 0;
+              }
+              
+              a {
+                color: white;
+                font-weight: lighter;
+                font-size: 16px;
+                text-decoration: none;
+                
+                @media screen and (min-width: 1000px) {
+                  color: #00ad92;
+                  
+                  &:hover {
+                    color: #333;
+                    border-bottom: 1px solid #b1b1b1;
+                  }
+                  
+                }
+              }
+            }
+          }
+        }
+        
+      }
+    }
+    
+    .cart {
+      float: right;
+      
+      &:before {
+        content: "";
+        background: url("./cart.svg") no-repeat;
+        width: 25px;
+        height: 23px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: -7px;
+      }
+    }
+  }
+}
+
+.l__footer {
+  text-align: center;
+  padding: 0px 20px;
+  font-family: "Ubuntu";
+  
+  .catalog {
+    padding-top: 40px;
+    position: relative;
+    
+    h1 {
+      font-family: Ubuntu; /*TODO font family ubuntu light*/
+      font-weight: lighter;
+      font-size: 28px;
+      color: #333;
+      margin: 0 0 25px;
+    }
+    
+    ul.category-list {
+      list-style: none;
+      text-align: left;
+      margin: 0px -20px 40px;
+      padding: 0px;
+      
+      & > li {
+        border-bottom: 1px solid #e6e6e6;
+        padding: 0px 20px;
+        
+        &:first-child {
+          border-top: 1px solid #e6e6e6;
+        }
+        
+        h2 {
+          font-size: 20px;
+          font-family: Ubuntu;
+          font-weight: lighter;
+          color: #333;
+          margin: 0;
+          line-height: 51px;
+          
+          &:before {
+            content: "";
+            background: url("./menu-arrows.png") no-repeat;
+            width: 17px;
+            height: 17px;
+            display: inline-block;
+            margin-right: 13px;
+          }
+          
+          &.opened:before {
+            background-position: -17px 0px;
+          }
+        }
+        
+        & > ul.subcategory-list {
+          display: none;
+          list-style: none;
+          padding: 0px 30px;
+          line-height: 2;
+          margin-bottom: 10px;
+          
+          &.opened {
+            display: block;
+          }
+          
+          & > li > a {
+            font-family: Ubuntu; /* TODO Ubuntu Light */
+            font-weight: lighter;
+            color: #999;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    
+    .btn.btn-load {
+      min-width: 280px;
+      height: 62px;
+      margin: auto;
+      border: 1px solid #66c0b2;
+      border-radius: 3px;
+      color: #00ad92;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 62px;
+      font-weight: bold;
+      padding: 0;
+      display: block;
+    }
+  }
+  
+  .logo {
+    width: 227px;
+    height: 45px;
+    display: block;
+    margin: 37px auto 20px;
+  }
+  
+  .socials-wrap {
+    overflow: hidden;
+    margin: 0px auto 15px;
+    
+    .socials {
+      display: inline-block;
+      
+      a {
+        float:left;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        line-height: 50px;
+        border: 1px solid #66c0b2;
+        margin: 0px 4px;
+        /* TODO temporarily*/
+        font-weight: bold;
+        color: #00ad92;
+        /* ==== */
+        position: relative;
+        
+        img {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+  
+  .phone {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .address {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #999;
+    /*TODO font family ubuntu light*/
+  }
+  
+  .subfooter {
+    background-color: #f1f1f1;
+    margin: 40px -20px 0px;
+    padding: 29px 20px 0px;
+    line-height: 2;
+    padding-bottom: 45px;
+    
+    .copyright {
+      color: #999;
+      font-weight: lighter;
+      margin-bottom: 14px;
+    }
+    
+    .links {
+      a {
+        display: block;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+    
+    .payment-variants {
+      display: block;
+      margin: 16px auto 0px;
+    }
+  }
+}
+/* 1.header ends */
+
+/* 2.footer */
+
+/* 2.footer ends */
+
+/* 3.screen 480 */
+@media screen and (min-width: 480px) {
+  /* 3.1.screen 480 header */
+  
+
+  
+  /* 3.1.screen 480 header ends */
+  /* 3.2.screen 480 footer */
+  .l__footer .catalog h1 {
+    font-size: 32px;
+  }
+  
+  .l__footer .subfooter {
+    padding-bottom: 30px;
+  }
+  
+  .l__footer .subfooter .copyright {
+    margin-bottom: 25px;
+  }
+  
+  .l__footer .subfooter .links a {
+    display: inline-block;
+    margin: 0px 10px;
+  }
+  
+  /* 3.2.screen 480 footer ends */
+}
+/* 3.screen 480 ends  */
+
+
+/* 4.screen 768 */
+@media screen and (min-width: 768px) {
+  /* 3.1.screen 768 header */
+
+  /* 4.1.screen 768 header ends */
+  /* 4.2.screen 768 footer */
+  
+  .l__footer .catalog {
+    overflow: hidden;
+    margin: 30px -20px;
+    padding: 0px 20px 30px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  
+  .l__footer .catalog h1 {
+    font-size: 32px;
+  }
+  
+  .l__footer .catalog ul.category-list {
+    margin:0px 0px 40px;
+  }
+  
+  .l__footer .catalog ul.category-list > li:first-child {
+    border: none;
+  }
+  
+  .l__footer .catalog ul.category-list > li {
+    display: block;
+    float: left;
+    width: 20%;
+    padding: 0px;
+    border: none;
+  }
+  
+  .l__footer .catalog ul.category-list > li h2 {
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .l__footer .catalog ul.category-list > li h2:before {
+    display: none;
+  }
+  .l__footer .catalog ul.category-list > li > ul.subcategory-list {
+    display: block;
+    padding: 0px;
+  }
+  .l__footer .btn.btn-load {
+    position: absolute;
+    left: 60%;
+    right: 25px;
+    bottom: 45px;
+  }
+  
+  .l__footer .logo-socials-wrap {
+    display: inline-block;
+  }
+  .l__footer .logo {
+    float: left;
+    margin: 0px;
+    margin-right: 10px;
+  }
+  
+  .l__footer .socials {
+    float: left;
+    margin: 0px;
+  }
+  
+  .l__footer .contacts {
+    clear: both;
+  }
+  
+  .l__footer .subfooter {
+    overflow: hidden;
+    padding-bottom: 30px;
+  }
+  .l__footer .subfooter .copyright {
+    float: left;
+    margin: 0;
+  }
+  
+  .l__footer .subfooter .links {
+    float: left;
+    width: 60%;
+    width: calc(100% - 280px);
+  }
+  
+  .l__footer .subfooter .links a {
+    /* display: inline-block;*/
+  }
+  
+  .l__footer .subfooter .payment-variants {
+    float: right;
+    margin: 2px 0px 0px;
+    padding: 0;
+  }
+  
+  /* 4.2.screen 768 footer ends */
+}
+/* 4.screen 768 ends  */
+
+/* 5.screen 1000 */
+@media screen and (min-width: 1000px) {
+  /* 5.1.screen 1000 header */
+
+  
+  /* 5.1.screen 1000 header ends */
+  /* 5.2.screen 1000 footer */
+  .l__footer .logo-socials-wrap {
+    float: left;
+  }
+  
+  .l__footer .contacts {
+    text-align: left;
+    float: right;
+    clear: none;
+  }
+  .l__footer .subfooter {
+    clear: both;
+  }
+  
+  /* 5.2.screen 1000 footer ends */
+}
+/* 5.screen 1000 ends */
+
+@media screen and (min-width: 1100px) {
+  .l__header .subheader, .l__footer .wrap, .l__header .navbar .inner, .l__footer .subfooter .inner {
+    width: 1280px;
+    margin: auto;
+  }
+  
+  .l__header, .l__footer {
+    width: 100%;
+  }
+  
+}

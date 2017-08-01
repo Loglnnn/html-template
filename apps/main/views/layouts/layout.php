@@ -47,20 +47,21 @@
   </div>
   <div class="navbar">
     <div class="inner">
-      <div class="menu-wrap"><span class="header">Меню</span>
-        <ul class="menu">
-          <li>Фотообои</li>
-          <li>Загрузить свое фото</li>
-          <li>
-            Информация<span class="arrow"></span>
-            <ul class="submenu">
-              <li>Как подобрать фотообои</li>
-              <li>Какие бывают размеры</li>
-              <li>Как правильно клеить</li>
+      <div class="menu-wrap" data-role="menu-root">
+        <a class="mobile-header" data-role="menu-toggle">Меню</a>
+        <ul class="menu" data-role="menu-list">
+          <li><a href="#">Фотообои</a></li>
+          <li><a href="#">Загрузить свое фото</a></li>
+          <li class="submenu" data-role="menu-root">
+            <a class="submenu-header" data-role="menu-toggle">Информация<span class="arrow"></span></a>
+            <ul class="submenu" data-role="menu-list">
+              <li><a href="#">Как подобрать фотообои</a></li>
+              <li><a href="#">Какие бывают размеры</a></li>
+              <li><a href="#">Как правильно клеить</a></li>
             </ul>
           </li>
-          <li>Портфолио</li>
-          <li>Контакты</li>
+          <li><a href="#">Портфолио</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
       </div>
       <div class="cart">2 товара</div>
@@ -74,27 +75,27 @@
 <div class="l__footer">
   <div class="wrap">
     <div class="catalog">
-      <h1>Каталог фотообоев</h1>
+      <h1>Каталог<br /> фотообоев</h1>
       <ul class="category-list">
-        <li>
-          <h2>Европа</h2>
-          <ul class="subcategory-list">
+        <li data-role="menu-root">
+          <h2 data-role="menu-toggle">Европа</h2>
+          <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Итем 1</a></li>
             <li><a href="#">Итем 2</a></li>
             <li><a href="#">Итем 3</a></li>
           </ul>
         </li>
-        <li class="opened">
-          <h2>Природа</h2>
-          <ul class="subcategory-list">
+        <li data-role="menu-root">
+          <h2 data-role="menu-toggle">Природа</h2>
+          <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Водопады</a></li>
             <li><a href="#">Горы</a></li>
             <li><a href="#">Лес</a></li>
           </ul>
         </li>
-        <li>
-          <h2>Цветы и растения</h2>
-          <ul class="subcategory-list">
+        <li data-role="menu-root">
+          <h2 data-role="menu-toggle">Цветы и растения</h2>
+          <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Макросъемка</a></li>
             <li><a href="#">Розы</a></li>
             <li><a href="#">Сакура</a></li>
@@ -109,9 +110,9 @@
             <li><a href="#">Натюрморт</a></li>
           </ul>
         </li>
-        <li>
-          <h2>Искусство</h2>
-          <ul class="subcategory-list">
+        <li data-role="menu-root">
+          <h2 data-role="menu-toggle">Искусство</h2>
+          <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Абстракция</a></li>
             <li><a href="#">Графика</a></li>
             <li><a href="#">Фентази</a></li>
@@ -122,9 +123,9 @@
             <li><a href="#">Обои современные</a></li>
           </ul>
         </li>
-        <li>
-          <h2>Искусство</h2>
-          <ul class="subcategory-list">
+        <li data-role="menu-root">
+          <h2 data-role="menu-toggle">Искусство</h2>
+          <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Абстракция</a></li>
             <li><a href="#">Графика</a></li>
             <li><a href="#">Фентази</a></li>
@@ -142,10 +143,10 @@
       <img src="/frontend/layout/logo.png" class="logo" />
       <div class="socials-wrap">
         <div class="socials">
-          <a href="#">T</a>
-          <a href="#">F</a>
-          <a href="#">V</a>
-          <a href="#">I</a>
+          <a href="#"><img src="/frontend/layout/socials-twitter.svg" /></a>
+          <a href="#"><img src="/frontend/layout/socials-facebook.svg" /></a>
+          <a href="#"><img src="/frontend/layout/socials-vk.svg" /></a>
+          <a href="#"><img src="/frontend/layout/socials-instagram.svg" /></a>
         </div>
       </div>
     </div>
@@ -165,4 +166,4 @@
       <img src="/frontend/layout/payments.png" class="payment-variants" />
     </div>
   </div>
-</div
+</div>
