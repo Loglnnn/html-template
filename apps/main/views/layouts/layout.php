@@ -33,7 +33,6 @@
 <?php // Тег <BODY> указывать не надо. ?>
 
 <!-- шапка, меню -->
-
 <div class="l__header">
   <div class="subheader">
     <img src="/frontend/layout/logo.png" class="logo" />
@@ -53,7 +52,7 @@
           <li><a href="#">Фотообои</a></li>
           <li><a href="#">Загрузить свое фото</a></li>
           <li class="submenu" data-role="menu-root">
-            <a class="submenu-header" data-role="menu-toggle">Информация<span class="arrow"></span></a>
+            <a class="submenu-header" data-role="menu-toggle">Информация</a>
             <ul class="submenu" data-role="menu-list">
               <li><a href="#">Как подобрать фотообои</a></li>
               <li><a href="#">Какие бывают размеры</a></li>
@@ -73,9 +72,9 @@
 
 <!-- футер -->
 <div class="l__footer">
-  <div class="wrap">
+  <div class="catalog-wrap">
     <div class="catalog">
-      <h1>Каталог<br /> фотообоев</h1>
+      <h1>Каталог<br class="c__hide-480" /> фотообоев</h1>
       <ul class="category-list">
         <li data-role="menu-root">
           <h2 data-role="menu-toggle">Европа</h2>
@@ -139,21 +138,21 @@
       </ul>
       <a href="#" class="btn btn-load">Загрузить свое фото</a>
     </div>
-    <div class="logo-socials-wrap">
-      <img src="/frontend/layout/logo.png" class="logo" />
-      <div class="socials-wrap">
-        <div class="socials">
-          <a href="#"><img src="/frontend/layout/socials-twitter.svg" /></a>
-          <a href="#"><img src="/frontend/layout/socials-facebook.svg" /></a>
-          <a href="#"><img src="/frontend/layout/socials-vk.svg" /></a>
-          <a href="#"><img src="/frontend/layout/socials-instagram.svg" /></a>
-        </div>
+  </div> 
+  <div class="logo-socials-wrap">
+    <img src="/frontend/layout/logo.png" class="logo" />
+    <div class="socials-wrap">
+      <div class="socials">
+        <a href="#"><img src="/frontend/layout/socials-twitter.svg" /></a>
+        <a href="#"><img src="/frontend/layout/socials-facebook.svg" /></a>
+        <a href="#"><img src="/frontend/layout/socials-vk.svg" /></a>
+        <a href="#"><img src="/frontend/layout/socials-instagram.svg" /></a>
       </div>
     </div>
-    <div class="contacts">
-      <div class="phone">8 800 832 32 32</div>
-      <div class="address">г. Москва, Нахимовский пр-т, д.24</div>
-    </div>
+  </div>
+  <div class="contacts">
+    <div class="phone">8 800 832 32 32</div>
+    <div class="address">г. Москва, Нахимовский пр-т, д.24</div>
   </div>
   <div class="subfooter">
     <div class="inner">
