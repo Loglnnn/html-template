@@ -29,6 +29,24 @@ ul.c__breadcrumbs > li h1 {
   font-size: 28px;
   color: #000;
 }
+/*==================*/
+.c__centered-image {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.c__centered-image > img {
+  position: absolute;
+  top: -100%;
+  bottom: -100%;
+  left: -100%;
+  right: -100%;
+  margin: auto;
+  min-width: 100%;
+  max-height: 110%;
+}
+/*==================*/
 .c__banner {
   position: relative;
 }
@@ -39,22 +57,6 @@ ul.c__breadcrumbs > li h1 {
   left: 20px;
   right: 20px;
   margin: 0;
-}
-.c__banner .img-wrap {
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
-.c__banner .img-wrap > img {
-  position: absolute;
-  top: -100%;
-  bottom: -100%;
-  left: -100%;
-  right: -100%;
-  margin: auto;
-  min-width: 100%;
-  max-height: 110%;
 }
 .c__banner .btn-container {
   position: absolute;
@@ -70,6 +72,7 @@ ul.c__breadcrumbs > li h1 {
   border-radius: 3px;
   text-transform: uppercase;
   font-size: 16px;
+  letter-spacing: 1px;
   font-weight: bold;
   padding: 0;
 }
@@ -78,6 +81,54 @@ ul.c__breadcrumbs > li h1 {
   color: white;
 }
 /*==================================*/
+.c__seotext {
+  padding: 29px 20px 35px;
+  margin: 0px -20px;
+  background-color: #f7f7f7;
+  font-weight: lighter;
+}
+@media screen and (min-width: 480px) {
+  .c__seotext {
+    padding: 50px 20px 56px;
+  }
+}
+.c__seotext h1 {
+  font-size: 28px;
+  font-weight: lighter;
+  text-align: center;
+  color: #333;
+  margin: 0 0 23px 0;
+}
+@media screen and (min-width: 480px) {
+  .c__seotext h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+}
+.c__seotext p {
+  text-align: left;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #333;
+  margin-bottom: 20px;
+}
+.c__seotext p:last-child {
+  margin-bottom: 0px;
+}
+/*===================================*/
+.c__photo-card img {
+  display: block;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px 2px 4px 0px;
+}
+.c__photo-card h2 {
+  margin: 15px 0 8px;
+  color: #333;
+}
+.c__photo-card .articul {
+  color: #999;
+}
+/*===================================*/
 div.c__vertical-centered-text {
   height: 100%;
 }
