@@ -99,10 +99,14 @@ ul.c__breadcrumbs {
     margin: 0px -20px;
     background-color: #f7f7f7;
     font-weight: lighter;
-    
+    line-height: 24px;
     
     @media screen and (min-width: 480px) {
       padding: 50px 20px 56px;
+    }
+    
+    @media screen and (min-width: 1000px) {
+      column-count: 2;
     }
     
     h1 {
@@ -165,5 +169,21 @@ div.c__vertical-centered-text {
   & > span {
     display: inline-block;
     vertical-align: middle;
+  }
+}
+
+/*=================================*/
+
+@media screen and (min-width: 480px)
+{
+  .c__hide-480 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px)
+{
+  .c__hide-768 {
+    display: none;
   }
 }
