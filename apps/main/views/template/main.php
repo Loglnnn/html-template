@@ -21,7 +21,7 @@
 <div class="page__main">
   <div class="main-banner-wrap">
     <div class="c__banner main-banner">
-      <div class="img-wrap">
+      <div class="c__centered-image overlayed">
         <img src="/frontend/main/banner.jpg" />
       </div>
       <h1>Разбудите <br class="newline" /> ваши стены!</h1>
@@ -39,7 +39,7 @@
   <div class="banners-row">
     <div class="wrapper">
       <div class="c__banner second-banner">
-        <div class="img-wrap">
+        <div class="c__centered-image">
           <img src="/frontend/main/your-photo.jpg" />
         </div>
         <h1>Фотообои <br />с вашим фото!</h1>
@@ -50,10 +50,10 @@
     </div>
     <div class="wrapper">
       <div class="c__banner second-banner">
-        <div class="img-wrap">
+        <div class="c__centered-image">
           <img src="/frontend/main/collection.jpg" />
         </div>
-        <h1>Коллекция <br />30 самых популярных<br />изображени  й</h1>
+        <h1>Коллекция <br />30 самых популярных<br />изображений</h1>
         <div class="btn-container">
           <a class="btn c__btn-block c__btn-filled">Посмотреть коллекцию</a>
         </div>
@@ -62,58 +62,65 @@
   </div>
   <div class="pluses-wrapper">
     <ul class="pluses">
-      <li class="time"><div class="c__vertical-centered-text"><span>1-2 дня сроки изготовления</span></div></li>
-      <li class="age"><div class="c__vertical-centered-text"><span>10 лет успешной работы</span></div></li>
-      <li class="best"><div class="c__vertical-centered-text"><span>Лучший каталог изображений</span></div></li>
-      <li class="map"><div class="c__vertical-centered-text"><span>Более 500 пунктов выдачи по России</span></div></li>
+      <li>
+        <div class="wrapper">
+          <img src = "/frontend/main/clock.svg" />
+        </div>
+        <div class="c__vertical-centered-text"><span>1-2 дня сроки изготовления</span></div>
+      </li>
+      <li>
+        <div class="wrapper">
+          <img src = "/frontend/main/success.svg" />
+        </div>
+        <div class="c__vertical-centered-text"><span>10 лет успешной работы</span></div>
+      </li>
+      <li>
+        <div class="wrapper">
+          <img src = "/frontend/main/best.svg" />
+        </div>
+        <div class="c__vertical-centered-text"><span>Лучший каталог изображений</span></div>
+      </li>
+      <li>
+        <div class="wrapper">
+          <img src = "/frontend/main/map.svg" />
+        </div>
+        <div class="c__vertical-centered-text"><span>Более 500 пунктов выдачи по России</span></div>
+      </li>
     </ul>
   </div>
   <div class="most-populars">
-    <h1>Самые продаваемые фотообои</h1>
+    <h1>Самые <br class="c__hide-480" />продаваемые<br class="c__hide-768" /> фотообои</h1>
+    
+    <!-- flexbox -->
     <div class="photo-card-list">
-      <div class="photo-card">
-        <img src="/frontend/main/testoboi.jpg" />
-        <h2>GreenBerry Дорога к замку</h2>
-        <div class="articul">F015-41</div>
+    <?php for($i=0;$i<6;$i++) { ?>
+      <div class="photo-card-wrap">
+        <div class="c__photo-card">
+          <a href="#">
+            <img src="/frontend/main/testoboi.jpg" />
+            <h2>GreenBerry Дорога к <?php if($i%2 == 0) echo "загадочному"; ?> замку </h2>
+            <div class="articul">F015-41</div>
+          </a>
+        </div>
       </div>
-      <div class="photo-card">
-        <img src="/frontend/main/testoboi.jpg" />
-        <h2>GreenBerry Дорога к замку</h2>
-        <div class="articul">F015-41</div>
-      </div>
-      <div class="photo-card">
-        <img src="/frontend/main/testoboi.jpg" />
-        <h2>GreenBerry Дорога к замку</h2>
-        <div class="articul">F015-41</div>
-      </div>
-      <div class="photo-card">
-        <img src="/frontend/main/testoboi.jpg" />
-        <h2>GreenBerry Дорога к замку</h2>
-        <div class="articul">F015-41</div>
-      </div>
-      <div class="photo-card">
-        <img src="/frontend/main/testoboi.jpg" />
-        <h2>GreenBerry Дорога к замку</h2>
-        <div class="articul">F015-41</div>
-      </div>
-      <div class="photo-card">
-        <img src="/frontend/main/testoboi.jpg" />
-        <h2>GreenBerry Дорога к замку</h2>
-        <div class="articul">F015-41</div>
-      </div>
-      <div class="photo-card">
-        <img src="/frontend/main/testoboi.jpg" />
-        <h2>GreenBerry Дорога к замку</h2>
-        <div class="articul">F015-41</div>
-      </div>
-      <div class="photo-card">
-        <img src="/frontend/main/testoboi.jpg" />
-        <h2>GreenBerry Дорога к замку</h2>
-        <div class="articul">F015-41</div>
-      </div>
+    <?php } ?>
     </div>
+    <!--div class="photo-card-list">
+    <?php for($i=0;$i<6;$i++) { ?>
+      <div class="photo-card-wrap">
+        <div class="c__photo-card">
+          <a href="#">
+            <img src="/frontend/main/testoboi.jpg" />
+            <h2>GreenBerry Дорога к <?php if($i%2 == 0) echo "загадочному"; ?> замку </h2>
+            <div class="articul">F015-41</div>
+          </a>
+        </div>
+      </div>
+    <?php } ?>
+    </div-->
   </div>
-  <div class="seotext">
+  
+  <div class="c__seotext">
     <h1>Фотообои в Москве и Московской области</h1>
     <p>
       У каждого периодически встает вопрос необходимости ремонта. Иногда его требует поизносившаяся побелка и выгоревшие обои, а иногда и банальное желание сделать свою жизнь в квартире немного ярче.
