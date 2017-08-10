@@ -70,15 +70,15 @@
   </div>
 </div>
 
-<?//= $content ?> <!-- эту строчку нужно оставить как есть и не обертывать ее в какие-либо блоки -->
+<?= $content ?> <!-- эту строчку нужно оставить как есть и не обертывать ее в какие-либо блоки -->
 
 <!-- футер -->
 <div class="l__footer container-fluid">
   <div class="catalog-wrap row">
     <div class="catalog container-fluid">
       <h1>Каталог<br class="c__hide-480" /> фотообоев</h1>
-      <ul class="category-list">
-        <li data-role="menu-root">
+      <ul class="category-list row">
+        <li class="container-fluid" data-role="menu-root">
           <h2 data-role="menu-toggle">Европа</h2>
           <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Итем 1</a></li>
@@ -86,7 +86,7 @@
             <li><a href="#">Итем 3</a></li>
           </ul>
         </li>
-        <li data-role="menu-root">
+        <li class="container-fluid" data-role="menu-root">
           <h2 data-role="menu-toggle">Природа</h2>
           <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Водопады</a></li>
@@ -94,7 +94,7 @@
             <li><a href="#">Лес</a></li>
           </ul>
         </li>
-        <li data-role="menu-root">
+        <li class="container-fluid" data-role="menu-root">
           <h2 data-role="menu-toggle">Цветы и растения</h2>
           <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Макросъемка</a></li>
@@ -111,7 +111,7 @@
             <li><a href="#">Натюрморт</a></li>
           </ul>
         </li>
-        <li data-role="menu-root">
+        <li class="container-fluid" data-role="menu-root">
           <h2 data-role="menu-toggle">Искусство</h2>
           <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Абстракция</a></li>
@@ -124,7 +124,7 @@
             <li><a href="#">Обои современные</a></li>
           </ul>
         </li>
-        <li data-role="menu-root">
+        <li class="container-fluid" data-role="menu-root">
           <h2 data-role="menu-toggle">Искусство</h2>
           <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Абстракция</a></li>
