@@ -4,30 +4,65 @@
  * Подробнее о компонентах: https://github.com/cronfy/html-template/blob/master/docs/components.md
  * Общая документация: https://github.com/cronfy/html-template/blob/master/docs/README.md
  */
-ul.c__breadcrumbs {
+@media screen and (min-width: 1280px) {
+  .c__inner {
+    margin: auto;
+    width: 1280px;
+  }
+}
+.c__breadcrumbs {
+  padding-top: 20px;
+  padding-bottom: 21px;
+  background-color: #f7f7f7;
+}
+@media screen and (min-width: 480px) {
+  .c__breadcrumbs {
+    padding-bottom: 22px;
+  }
+}
+.c__breadcrumbs ul.breadcrumbs {
+  padding: 0;
   list-style: none;
   text-align: center;
-  padding: 0;
 }
-ul.c__breadcrumbs > li {
+.c__breadcrumbs ul.breadcrumbs > li {
   display: inline;
   font-size: 18px;
+  font-weight: lighter;
 }
-ul.c__breadcrumbs > li:after {
+.c__breadcrumbs ul.breadcrumbs > li:after {
   content: "/";
   margin: 0px 5px;
-  color: gray;
-  /* TODO */
+  color: #ccc;
 }
-ul.c__breadcrumbs > li:last-child:after {
-  content: initial;
+.c__breadcrumbs ul.breadcrumbs > li:last-child:after {
+  content: none;
 }
-ul.c__breadcrumbs > li a {
-  color: #00ad92;
-}
-ul.c__breadcrumbs > li h1 {
+.c__breadcrumbs ul.breadcrumbs > li h1 {
   font-size: 28px;
+  font-weight: lighter;
   color: #000;
+  margin: 0;
+}
+@media screen and (min-width: 480px) {
+  .c__breadcrumbs ul.breadcrumbs > li h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .c__breadcrumbs ul.breadcrumbs > li h1 {
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .c__breadcrumbs ul.breadcrumbs > li h1 {
+    font-size: 42px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .c__breadcrumbs ul.breadcrumbs > li h1 {
+    font-size: 52px;
+  }
 }
 /*==================*/
 .c__centered-image {
@@ -44,6 +79,7 @@ ul.c__breadcrumbs > li h1 {
   right: -100%;
   margin: auto;
   min-width: 100%;
+  /*todo что то тут искривляет картинку*/
   max-height: 110%;
 }
 /*==================*/
@@ -80,22 +116,47 @@ ul.c__breadcrumbs > li h1 {
   background-color: #00ad92;
   color: white;
 }
+.c__btn-filled:hover {
+  background-color: #00d6b5;
+  color: white;
+}
+.c__btn-filled:active {
+  background-color: #006d5c;
+  color: white;
+}
+.c__btn-default-line-height {
+  line-height: initial;
+}
 /*==================================*/
 .c__seotext {
-  padding: 29px 20px 35px;
-  margin: 0px -20px;
+  padding-top: 29px;
+  padding-bottom: 35px;
   background-color: #f7f7f7;
   font-weight: lighter;
   line-height: 24px;
 }
 @media screen and (min-width: 480px) {
   .c__seotext {
-    padding: 50px 20px 56px;
+    padding-top: 50px;
+    padding-bottom: 56px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .c__seotext {
+    padding-top: 83px;
+    padding-bottom: 93px;
   }
 }
 @media screen and (min-width: 1000px) {
-  .c__seotext {
+  .c__seotext .inner {
     column-count: 2;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .c__seotext .inner {
+    width: 1280px;
+    margin: auto;
+    padding: 0px 30px;
   }
 }
 .c__seotext h1 {
@@ -111,6 +172,12 @@ ul.c__breadcrumbs > li h1 {
     margin-bottom: 12px;
   }
 }
+@media screen and (min-width: 1280px) {
+  .c__seotext h1 {
+    font-size: 52px;
+    margin-bottom: 37px;
+  }
+}
 .c__seotext p {
   text-align: left;
   font-size: 16px;
@@ -122,17 +189,45 @@ ul.c__breadcrumbs > li h1 {
   margin-bottom: 0px;
 }
 /*===================================*/
-.c__photo-card img {
+.c__photo-card .img-wrap {
+  overflow: hidden;
+}
+.c__photo-card .img-wrap img {
   display: block;
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.17) 0px 2px 4px 0px;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
 }
-.c__photo-card h2 {
+.c__photo-card:hover .img-wrap img {
+  transform: scale(1.3);
+}
+.c__photo-card .description {
+  padding: 0px 20px;
+  text-align: center;
+}
+.c__photo-card .description .caption {
   margin: 15px 0 8px;
   color: #333;
+  font-size: 16px;
+  font-weight: lighter;
 }
-.c__photo-card .articul {
+@media screen and (min-width: 1280px) {
+  .c__photo-card .description .caption {
+    margin-top: 23px;
+    font-size: 18px;
+  }
+}
+.c__photo-card .description .articul {
   color: #999;
+  font-weight: lighter;
+  font-size: 16px;
+}
+@media screen and (min-width: 1280px) {
+  .c__photo-card .description .articul {
+    font-size: 18px;
+    margin-bottom: 13px;
+  }
 }
 /*===================================*/
 div.c__vertical-centered-text {
@@ -156,6 +251,11 @@ div.c__vertical-centered-text > span {
 }
 @media screen and (min-width: 768px) {
   .c__hide-768 {
+    display: none;
+  }
+}
+@media screen and (max-width: 479px) {
+  .c__hide-320-480 {
     display: none;
   }
 }
