@@ -211,10 +211,6 @@ body {
             background-color: #1c8675;
             padding: 0 0 10px;
             
-            &.opened {
-              display: block;
-            }
-            
             & > li {
               padding: 0px 20px;
               height: 34px;
@@ -437,6 +433,17 @@ body {
   }
 }
 
+@media screen and (max-width:999px) {
+  .l__header {
+    .navbar {
+      .menu-wrap {
+        ul.menu > li > ul.submenu-content.opened {
+          display: block;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (min-width:480px) {
   .l__header {
@@ -698,10 +705,6 @@ body {
               position: absolute;
               top: 50px;
               z-index: 10; /* поверх страницы */
-              
-              &.opened {
-                display: none;
-              }
 
               & > li {
                 line-height: 28px;

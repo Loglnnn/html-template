@@ -188,9 +188,6 @@ body a:active {
   background-color: #1c8675;
   padding: 0 0 10px;
 }
-.l__header .navbar .menu-wrap ul.menu > li > ul.submenu-content.opened {
-  display: block;
-}
 .l__header .navbar .menu-wrap ul.menu > li > ul.submenu-content > li {
   padding: 0px 20px;
   height: 34px;
@@ -365,6 +362,11 @@ body a:active {
 .l__footer .subfooter .payment-variants {
   display: block;
   margin: 16px auto 0px;
+}
+@media screen and (max-width: 999px) {
+  .l__header .navbar .menu-wrap ul.menu > li > ul.submenu-content.opened {
+    display: block;
+  }
 }
 @media screen and (min-width: 480px) {
   .l__header .subheader {
@@ -577,9 +579,6 @@ body a:active {
     top: 50px;
     z-index: 10;
     /* поверх страницы */
-  }
-  .l__header .navbar .menu-wrap ul.menu > li > ul.submenu-content.opened {
-    display: none;
   }
   .l__header .navbar .menu-wrap ul.menu > li > ul.submenu-content > li {
     line-height: 28px;
