@@ -85,6 +85,15 @@ body a:active {
   border-radius: 0px;
   position: relative;
 }
+.l__header .navbar.fixed {
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  /*поверх всех элементов страницы*/
+}
 .l__header .navbar .menu-wrap {
   float: left;
 }

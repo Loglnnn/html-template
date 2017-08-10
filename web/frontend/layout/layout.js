@@ -21,4 +21,11 @@ $(document).ready(function () {
       toggle.toggleClass("opened");
     });
   });
+  $(window).scroll(function() {
+    var top = $(document).scrollTop();
+    if(top < 70 )
+      $(".l__header .navbar").removeClass("fixed");
+    else
+      $(".l__header .navbar").addClass("fixed");
+  })
 });

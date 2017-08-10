@@ -95,6 +95,15 @@ body {
     border-radius: 0px;
     position: relative;
     
+    &.fixed {
+      position: fixed;
+      margin: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 30; /*поверх всех элементов страницы*/
+    }
+    
     .menu-wrap {
       float: left;
       
