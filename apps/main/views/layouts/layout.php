@@ -33,27 +33,29 @@
 <?php // Тег <BODY> указывать не надо. ?>
 
 <!-- шапка, меню -->
-<div class="l__header">
-  <div class="subheader">
-    <img src="/frontend/layout/logo.png" class="logo" />
-    <div class="search">
-      <input type="text" placeholder="Найти" />
-    </div>
-    <div class="contacts">
-      <div class="city">Санкт-Петербург</div>
-      <div class="phone">8 800 832 32 32</div>
+<div class="l__header container-fluid">
+  <div class="subheader row">
+    <div class="inner container-fluid">
+      <img src="/frontend/layout/logo.png" class="logo" />
+      <div class="search">
+        <input type="text" placeholder="Найти" />
+      </div>
+      <div class="contacts">
+        <div class="city">Санкт-Петербург</div>
+        <div class="phone">8 800 832 32 32</div>
+      </div>
     </div>
   </div>
-  <div class="navbar">
-    <div class="inner">
+  <div class="navbar row">
+    <div class="inner container-fluid">
       <div class="menu-wrap" data-role="menu-root">
         <a class="mobile-header" data-role="menu-toggle">Меню</a>
         <ul class="menu" data-role="menu-list">
-          <li><a href="#">Фотообои</a></li>
+          <li class="main"><a href="#">Фотообои</a></li>
           <li><a href="#">Загрузить свое фото</a></li>
           <li class="submenu" data-role="menu-root">
             <a class="submenu-header" data-role="menu-toggle">Информация</a>
-            <ul class="submenu" data-role="menu-list">
+            <ul class="submenu-content" data-role="menu-list">
               <li><a href="#">Как подобрать фотообои</a></li>
               <li><a href="#">Какие бывают размеры</a></li>
               <li><a href="#">Как правильно клеить</a></li>
@@ -68,12 +70,12 @@
   </div>
 </div>
 
-<?= $content ?> <!-- эту строчку нужно оставить как есть и не обертывать ее в какие-либо блоки -->
+<?//= $content ?> <!-- эту строчку нужно оставить как есть и не обертывать ее в какие-либо блоки -->
 
 <!-- футер -->
-<div class="l__footer">
-  <div class="catalog-wrap">
-    <div class="catalog">
+<div class="l__footer container-fluid">
+  <div class="catalog-wrap row">
+    <div class="catalog container-fluid">
       <h1>Каталог<br class="c__hide-480" /> фотообоев</h1>
       <ul class="category-list">
         <li data-role="menu-root">
@@ -139,23 +141,27 @@
       <a href="#" class="btn btn-load">Загрузить свое фото</a>
     </div>
   </div> 
-  <div class="logo-socials-wrap">
-    <img src="/frontend/layout/logo.png" class="logo" />
-    <div class="socials-wrap">
-      <div class="socials">
-        <a href="#"><img src="/frontend/layout/socials-twitter.svg" /></a>
-        <a href="#"><img src="/frontend/layout/socials-facebook.svg" /></a>
-        <a href="#"><img src="/frontend/layout/socials-vk.svg" /></a>
-        <a href="#"><img src="/frontend/layout/socials-instagram.svg" /></a>
+  <div class="footer-row row">
+    <div class="inner container-fluid">
+      <div class="logo-socials-wrap">
+        <img src="/frontend/layout/logo.png" class="logo" />
+        <div class="socials-wrap">
+          <div class="socials">
+            <a href="#"><img src="/frontend/layout/socials-twitter.svg" /></a>
+            <a href="#"><img src="/frontend/layout/socials-facebook.svg" /></a>
+            <a href="#"><img src="/frontend/layout/socials-vk.svg" /></a>
+            <a href="#"><img src="/frontend/layout/socials-instagram.svg" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="contacts">
+        <div class="phone">8 800 832 32 32</div>
+        <div class="address">г. Москва, Нахимовский пр-т, д.24</div>
       </div>
     </div>
   </div>
-  <div class="contacts">
-    <div class="phone">8 800 832 32 32</div>
-    <div class="address">г. Москва, Нахимовский пр-т, д.24</div>
-  </div>
-  <div class="subfooter">
-    <div class="inner">
+  <div class="subfooter row">
+    <div class="inner container-fluid">
       <div class="copyright">© stenagrafika.ru, 2017</div>
       <div class="links">
         <a href="#">Портфолио</a>
