@@ -12,7 +12,6 @@
  */
 
 .page__main { 
-  padding: 0px 20px;
   font-family: "Ubuntu";
   font-size: 14px;
   
@@ -24,10 +23,29 @@
   
   .main-banner-wrap {
     position: relative;
-    margin: 0px -20px;
+    @media screen and(min-width: 1280px) {
+      margin-top: 1px;
+    }
+    
     
     .main-banner {
       height: 398px;
+      
+      @media screen and (min-width: 1000px) {
+        height: 478px;
+      }
+      
+      @media screen and(min-width: 1280px) {
+        height: 799px;
+      }
+      
+      .main-slider {
+        height: 100%;
+        
+        .slick-list, .slick-track, .slick-slide {
+          height: 100%;
+        }
+      }
       
       .overlayed {
         position: relative;
@@ -45,10 +63,6 @@
         }
       }
       
-      @media screen and (min-width: 1000px) {
-        height: 478px;
-      }
-      
       h1 {
         color: white;
         font-size: 32px;
@@ -62,18 +76,26 @@
         }
         
         @media screen and (min-width: 768px) {
-          top: 50px;
+          top: 62px;
         }
         
         @media screen and (min-width: 1000px) {
           font-size: 64px;
+          top: 45px;
+        }
+        
+        @media screen and (min-width: 1280px) {
+          font-size: 100px;
+          top: 127px;
         }
       }
       .btn-container {
         bottom: 39px;
         
+        
+        
         @media screen and (min-width: 768px) {
-          bottom: 200px;
+          bottom: 198px;
           left: 255px;
           right: 255px;
         }
@@ -83,19 +105,30 @@
           right: 370px;
           bottom: 278px;
         }
+        
+        @media screen and (min-width: 1280px) {
+          bottom: 466px;
+          
+          .wrapper {
+            max-width: 270px;
+            width: 40%;
+            margin: auto;
+          }
+        }
       }
     }
     .buttons {
-      padding: 30px 20px;
+      padding-top: 30px;
+      padding-bottom: 30px;
       
       @media screen and (min-width: 480px) {
-        padding: 30px 20px 40px;
+        padding-bottom: 40px;
       }
       
       @media screen and (min-width: 768px) {
         position: absolute;
         padding: 0;
-        bottom: 40px;
+        bottom: 36px;
         margin-bottom: 0;
         margin-top: 0;
         text-align: center;
@@ -104,6 +137,11 @@
       
       @media screen and (min-width: 1000px) {
         font-size: 18px;
+        bottom: 40px;
+      }
+      
+      @media screen and (min-width: 1280px) {
+        bottom: 81px;
       }
       
       a {
@@ -117,6 +155,14 @@
         height: 53px;
         margin-top: 10px;
         position: relative; 
+        
+        &:hover {
+          border-color: #00d6b5;
+        }
+        
+        &:active {
+          border-color: #006d5c;
+        }
         
         &:first-child {
           margin-top: 0;
@@ -170,14 +216,12 @@
   }
   
   .banners-row {
-    margin: 0px -20px;
   
     @media screen and (min-width: 768px) {
       overflow: hidden;
-      margin: 0px -20px;
     }
     
-    .wrapper {
+    .banner-wrap {
       margin-top: 2px;
       
       &:first-child {
@@ -202,7 +246,7 @@
  
       .second-banner {
         height: 314px;
-        
+        overflow: hidden;
         
         @media screen and (min-width: 480px) {
           height: 471px;
@@ -214,6 +258,10 @@
         
         @media screen and (min-width: 1000px) {
           height: 490px;
+        }
+        
+        @media screen and (min-width: 1280px) {
+          height: 940px;
         }
         
         h1 {
@@ -237,6 +285,68 @@
             font-size: 32px;
             top: 37px;
           }
+          
+          @media screen and (min-width: 1280px) {
+            font-size: 52px;
+            top: 80px;
+          }
+        }
+        
+        .side-text {
+          position: absolute;
+          top: 100px;
+          left: 40px;
+          
+          @media screen and (min-width: 480px) {
+            top: 140px;
+          }
+          
+          @media screen and (min-width: 1000px) {
+            top: 180px;
+            font-size: 16px;
+          }
+          
+          @media screen and (min-width: 1280px) {
+            top: 300px;
+            font-size: 22px;
+          }
+          
+          p {
+            padding: 6px 15px;
+            margin: 0 0 4px;
+            background-color: rgba(255,255,255,0.9);
+            transform: translate(-360px,0);
+            transition: opacity 0.35s, transform 0.35s;
+            
+            &:first-child {
+              transition-delay: 0.15s;
+            } 
+            
+            &:nth-of-type(2) {
+              transition-delay: 0.1s;
+            }
+            
+            &:nth-of-type(3) {
+              transition-delay: 0.05s;
+            }
+          }
+        }
+        
+        &:hover .side-text p {
+          opacity: 1;
+          transform: translate(0,0);
+          
+          &:first-child {
+            transition-delay: 0s;
+          } 
+          
+          &:nth-of-type(2) {
+            transition-delay: 0.05s;
+          }
+          
+          &:nth-of-type(3) {
+            transition-delay: 0.1s;
+          }
         }
         
         .btn-container {
@@ -252,34 +362,56 @@
             left: 49px;
             right: 49px;
           }
+          
+          @media screen and (min-width: 1280px) {
+            bottom: 79px;
+            
+            .wrapper {
+              max-width: 300px;
+              width: 50%;
+              margin: auto;
+            }
+          }
         }
       }
     }
   }
   .pluses-wrapper {
-    margin: 0px -20px;
-    padding: 31px 20px 40px;
+    padding-top: 31px;
+    padding-bottom: 40px;
     background-color: #f7f7f7;
     
     @media screen and (min-width: 480px) {
-      padding: 30px 85px 40px;
+      padding-top: 30px;
+      padding-bottom: 40px;
     }
     
     @media screen and (min-width: 768px) {
-      padding: 60px 20px 18px;
+      padding-top: 60px;
+      padding-bottom: 18px;
     }
     
     @media screen and (min-width: 1000px) {
-      padding: 77px 20px 14px;
+      padding-top: 77px;
+      padding-bottom: 14px;
+    }
+    
+    @media screen and (min-width: 1280px) {
+      padding-top: 77px;
+      padding-bottom: 14px;
+      
+      .inner {
+        width: 1280px;
+        margin: auto;
+      }
     }
     
     ul.pluses {
       list-style: none;
-      padding: 0px;
+      padding: 0px 67px;
       color: #333;
       font-size: 20px;
       font-weight: lighter;
-      padding-left: 99px;
       display: block;
       margin: 0;
       
@@ -296,10 +428,16 @@
         padding: 0px 64px;
       }
       
+      @media screen and (min-width: 1280px) {
+        
+        font-size: 32px;
+      }
+      
       & > li {
         position: relative;
         height: 80px;
         margin: 0px 0px 20px;
+        padding-left: 99px;
         
         @media screen and (min-width: 768px) {
           float: left;
@@ -314,6 +452,10 @@
           padding-right: 40px;
         }
         
+        @media screen and (min-width: 1280px) {
+          padding-right: 80px;
+        }
+        
         &:last-child {
           margin-bottom: 0;
         }
@@ -322,7 +464,7 @@
           position: absolute;
           height: 80px;
           width: 80px;
-          left: -95px;
+          left: 0px;
           border: 2px solid #00ad92;
           border-radius: 80px;
           background-color: white;
@@ -360,12 +502,17 @@
       padding-bottom: 55px;
     }
     
+    @media screen and (min-width: 1280px) {
+      padding-top: 81px;
+      padding-bottom: 95px;
+    }
+    
     h1 {
       color: #333;
       font-size: 28px;
       font-weight: lighter;
       margin: 0;
-      margin-bottom: 31px;
+      margin-bottom: 11px;
       
       @media screen and (min-width: 480px) {
         font-size: 32px;
@@ -378,6 +525,11 @@
       
       @media screen and (min-width: 1000px) {
         margin-bottom: -11px;
+      }
+      
+      @media screen and (min-width: 1280px) {
+        font-size: 52px;
+        margin-bottom: 18px;
       }
     }
     
@@ -404,7 +556,6 @@
             padding-right: 10px;
           }
         }
-        /* TODO height when two or more lines */
         @media screen and (min-width: 768px) {
           width: 33%;
           margin-top: 48px;
@@ -466,6 +617,56 @@
             padding-left: 15px;
           }
           
+        }
+        
+        @media screen and (min-width: 1280px) {
+          width: 16.666666%;
+          
+          &:nth-child(4n+1) {
+            padding-right: 0px;
+          }
+          
+          &:nth-child(4n+2) {
+            padding-right: 0px;
+            padding-left: 0px;
+          }
+          
+          &:nth-child(4n+3) {
+            padding-right: 0px;
+            padding-left: 0px;
+          }
+          
+          &:nth-child(4n+4) {
+            padding-left: 0px;
+          }
+          
+          &:nth-child(6n+1) {
+            padding-right: 25px;
+          }
+          
+          &:nth-child(6n+2) {
+            padding-right: 20px;
+            padding-left: 5px;
+          }
+          
+          &:nth-child(6n+3) {
+            padding-right: 15px;
+            padding-left: 10px;
+          }
+          
+          &:nth-child(6n+4) {
+            padding-right: 10px;
+            padding-left: 15px;
+          }
+          
+          &:nth-child(6n+5) {
+            padding-right: 5px;
+            padding-left: 20px;
+          }
+          
+          &:nth-child(6n) {
+            padding-left: 25px;
+          }
         }
         
         img {
