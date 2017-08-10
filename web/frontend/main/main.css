@@ -553,7 +553,6 @@
   font-size: 16px;
   font-weight: lighter;
   margin-top: 25px;
-  /* TODO height when two or more lines */
 }
 @media screen and (min-width: 480px) {
   .page__main .most-populars .photo-card-list .photo-card-wrap {
