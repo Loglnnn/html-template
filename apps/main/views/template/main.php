@@ -1,23 +1,3 @@
-<?php
-/**
- * Главное:
- *      https://github.com/cronfy/html-template/blob/master/docs/README.md
- *
- * О шаблонах HTML:
- *      Расположение CSS, JS, картинок:
- *      https://github.com/cronfy/html-template/blob/master/docs/file-structure.md
- *      Требования к именованию классов и структуре CSS:
- *      https://github.com/cronfy/html-template/blob/master/docs/css-structure-and-naming.md
- *      Фиксированная структура для некоторых элементов HTML:
- *      https://github.com/cronfy/html-template/blob/master/docs/fixed-html.md
- *
- * Стандартная страница сайта.
- *
- * Для повторяющихся на разных страницах элементов - h1, хлебные крошки, пагинация и пр. - можно
- * использовать общий файл стилей `web/frontend/component/components.css`, чтобы избежать дублирования кода.
- *
- */
-?>
 <div class="page__main container-fluid">
   <div class="main-banner-wrap row">
     <div class="c__banner main-banner">
@@ -82,7 +62,7 @@
     </div>
   </div>
   <div class="pluses-wrapper row">
-    <div class="inner container-fluid">
+    <div class="c__inner container-fluid">
       <ul class="pluses">
         <li>
           <div class="wrapper">
@@ -135,7 +115,7 @@
   </div>
   
   <div class="c__seotext row">
-    <div class="inner container-fluid">
+    <div class="c__inner container-fluid">
       <h1>Фотообои в Москве <br class="c__hide-480" /> и Московской области</h1>
       <p>
         У каждого периодически встает вопрос необходимости ремонта. Иногда его требует поизносившаяся побелка и выгоревшие обои, а иногда и банальное желание сделать свою жизнь в квартире немного ярче.
@@ -145,6 +125,5 @@
       </p>
     </div>
   </div>
-  
 </div>
 

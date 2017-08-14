@@ -1,43 +1,13 @@
-/*
- * Главное:
- *      https://github.com/cronfy/html-template/blob/master/docs/README.md
- *
- * О файлах стилей:
- *      Расположение CSS, JS, картинок:
- *      https://github.com/cronfy/html-template/blob/master/docs/file-structure.md
- *      Требования к именованию классов и структуре CSS:
- *      https://github.com/cronfy/html-template/blob/master/docs/css-structure-and-naming.md
- *
- * Стили конкретной страницы: apps/main/views/template/example.php
- */
-
+/* mobile-first */
 .page__main { 
   font-family: "Ubuntu";
   font-size: 14px;
   
-  .newline {
-    @media screen and (min-width: 768px) {
-      display: none;
-    }
-  }
-  
   .main-banner-wrap {
     position: relative;
-    @media screen and(min-width: 1280px) {
-      margin-top: 1px;
-    }
-    
     
     .main-banner {
       height: 398px;
-      
-      @media screen and (min-width: 1000px) {
-        height: 478px;
-      }
-      
-      @media screen and(min-width: 1280px) {
-        height: 799px;
-      }
       
       .main-slider {
         height: 100%;
@@ -68,81 +38,14 @@
         font-size: 32px;
         font-weight: bold;
         text-shadow: rgba(0,0,0,0.11) 0px 3px 5px;
-        
-        
-        @media screen and (min-width: 480px) {
-          font-size: 48px;
-          top: 35px;
-        }
-        
-        @media screen and (min-width: 768px) {
-          top: 62px;
-        }
-        
-        @media screen and (min-width: 1000px) {
-          font-size: 64px;
-          top: 45px;
-        }
-        
-        @media screen and (min-width: 1280px) {
-          font-size: 100px;
-          top: 127px;
-        }
       }
       .btn-container {
         bottom: 39px;
-        
-        
-        
-        @media screen and (min-width: 768px) {
-          bottom: 198px;
-          left: 255px;
-          right: 255px;
-        }
-        
-        @media screen and (min-width: 1000px) {
-          left: 370px;
-          right: 370px;
-          bottom: 278px;
-        }
-        
-        @media screen and (min-width: 1280px) {
-          bottom: 466px;
-          
-          .wrapper {
-            max-width: 270px;
-            width: 40%;
-            margin: auto;
-          }
-        }
       }
     }
     .buttons {
       padding-top: 30px;
       padding-bottom: 30px;
-      
-      @media screen and (min-width: 480px) {
-        padding-bottom: 40px;
-      }
-      
-      @media screen and (min-width: 768px) {
-        position: absolute;
-        padding: 0;
-        bottom: 36px;
-        margin-bottom: 0;
-        margin-top: 0;
-        text-align: center;
-        width: 100%;
-      }
-      
-      @media screen and (min-width: 1000px) {
-        font-size: 18px;
-        bottom: 40px;
-      }
-      
-      @media screen and (min-width: 1280px) {
-        bottom: 81px;
-      }
       
       a {
         padding: 0px 22px 0px 68px;
@@ -168,24 +71,6 @@
           margin-top: 0;
         }
         
-        @media screen and (min-width: 768px) {
-          display: inline-block;
-          margin-left: 20px;
-          color: white;
-          border-color: rgba(255,255,255,0.33);
-          
-          &:first-child {
-            margin-left: 0;
-          }
-        }
-        
-        @media screen and (min-width: 1000px) {
-          height: 66px;
-          line-height: 66px;
-          margin-left: 26px;
-          padding: 0px 32px 0px 78px;
-        }
-        
         &.business:before, &.book:before, &.home:before {
           content: "";
           display: block;
@@ -193,10 +78,6 @@
           width: 32px;
           height: 53px;
           left: 19px;
-          
-          @media screen and (min-width: 1000px) {
-            height: 66px;
-          }
         }
         
         &.business:before {
@@ -216,53 +97,16 @@
   }
   
   .banners-row {
-  
-    @media screen and (min-width: 768px) {
-      overflow: hidden;
-    }
-    
     .banner-wrap {
       margin-top: 2px;
       
       &:first-child {
         margin-top: 0;
-        @media screen and (min-width: 768px) {
-          margin-top: 2px;
-        }
-      }
-      
-      @media screen and (min-width: 768px) {
-        float: left;
-        width: 50%;
-        
-        &:nth-child(2n+1) {
-          padding-right: 1px;
-        }
-        
-        &:nth-child(2n) {
-          padding-left: 1px;
-        }
       }
  
       .second-banner {
         height: 314px;
         overflow: hidden;
-        
-        @media screen and (min-width: 480px) {
-          height: 471px;
-        }
-        
-        @media screen and (min-width: 768px) {
-          height: 376px;
-        }
-        
-        @media screen and (min-width: 1000px) {
-          height: 490px;
-        }
-        
-        @media screen and (min-width: 1280px) {
-          height: 940px;
-        }
         
         h1 {
           font-size: 28px;
@@ -271,46 +115,13 @@
           top: 18px;
           left: 15px;
           right: 15px;
-          
-          @media screen and (min-width: 480px) {
-            font-size: 32px;
-            top: 28px;
-          }
-          
-          @media screen and (min-width: 768px) {
-            font-size: 24px;
-          }
-          
-          @media screen and (min-width: 1000px) {
-            font-size: 32px;
-            top: 37px;
-          }
-          
-          @media screen and (min-width: 1280px) {
-            font-size: 52px;
-            top: 80px;
-          }
         }
         
         .side-text {
           position: absolute;
-          top: 100px;
+          top: 110px;
           left: 40px;
-          
-          @media screen and (min-width: 480px) {
-            top: 140px;
-          }
-          
-          @media screen and (min-width: 1000px) {
-            top: 180px;
-            font-size: 16px;
-          }
-          
-          @media screen and (min-width: 1280px) {
-            top: 300px;
-            font-size: 22px;
-          }
-          
+
           p {
             padding: 6px 15px;
             margin: 0 0 4px;
@@ -351,27 +162,6 @@
         
         .btn-container {
           bottom: 20px;
-          
-          @media screen and (min-width: 480px) {
-            bottom: 40px;
-            left: 96px;
-            right: 96px;
-          }
-          
-          @media screen and (min-width: 768px) {
-            left: 49px;
-            right: 49px;
-          }
-          
-          @media screen and (min-width: 1280px) {
-            bottom: 79px;
-            
-            .wrapper {
-              max-width: 300px;
-              width: 50%;
-              margin: auto;
-            }
-          }
         }
       }
     }
@@ -381,80 +171,20 @@
     padding-bottom: 40px;
     background-color: #f7f7f7;
     
-    @media screen and (min-width: 480px) {
-      padding-top: 30px;
-      padding-bottom: 40px;
-    }
-    
-    @media screen and (min-width: 768px) {
-      padding-top: 60px;
-      padding-bottom: 18px;
-    }
-    
-    @media screen and (min-width: 1000px) {
-      padding-top: 77px;
-      padding-bottom: 14px;
-    }
-    
-    @media screen and (min-width: 1280px) {
-      padding-top: 77px;
-      padding-bottom: 14px;
-      
-      .inner {
-        width: 1280px;
-        margin: auto;
-      }
-    }
-    
     ul.pluses {
       list-style: none;
-      padding: 0px 67px;
+      padding: 0px;
       color: #333;
       font-size: 20px;
       font-weight: lighter;
       display: block;
       margin: 0;
       
-      @media screen and (min-width: 480px) {
-        font-size: 24px;
-      }
-      
-      @media screen and (min-width: 768px) {
-        padding: 0px;
-        overflow: hidden;
-      }
-      
-      @media screen and (min-width: 1000px) {
-        padding: 0px 64px;
-      }
-      
-      @media screen and (min-width: 1280px) {
-        
-        font-size: 32px;
-      }
-      
       & > li {
         position: relative;
         height: 80px;
         margin: 0px 0px 20px;
         padding-left: 99px;
-        
-        @media screen and (min-width: 768px) {
-          float: left;
-          width: 50%;
-          padding-left: 130px;
-          margin-bottom: 42px;
-        }
-        
-        @media screen and (min-width: 1000px) {
-          margin: 0px 0px 65px;
-          height: 100px;
-          padding-right: 40px;
-        }
-        
-        @media screen and (min-width: 1280px) {
-          padding-right: 80px;
-        }
         
         &:last-child {
           margin-bottom: 0;
@@ -475,18 +205,6 @@
             width: 100%;
             height: 100%;
           }
-          
-          @media screen and (min-width: 768px) {
-            left: 31px;
-          }
-          
-          @media screen and (min-width: 1000px) {
-            width: 100px;
-            height: 100px;
-            border-radius: 100px;
-            left: 0px;
-          }
-          
         }
       }
     }
@@ -496,55 +214,99 @@
     padding-bottom: 33px;
     text-align: center;
     
-    @media screen and (min-width: 480px) {
-      overflow: hidden;
-      padding-top: 48px;
-      padding-bottom: 55px;
-    }
-    
-    @media screen and (min-width: 1280px) {
-      padding-top: 81px;
-      padding-bottom: 95px;
-    }
-    
     h1 {
       color: #333;
       font-size: 28px;
       font-weight: lighter;
       margin: 0;
       margin-bottom: 11px;
-      
-      @media screen and (min-width: 480px) {
-        font-size: 32px;
-        margin-bottom: 0px;
-      }
-      
-      @media screen and (min-width: 768px) {
-        margin-bottom: -17px;
-      }
-      
-      @media screen and (min-width: 1000px) {
-        margin-bottom: -11px;
-      }
-      
-      @media screen and (min-width: 1280px) {
-        font-size: 52px;
-        margin-bottom: 18px;
-      }
     }
     
     .photo-card-list {
-        /*flxebox*/
-        display: flex;
-        flex-wrap: wrap;
-    
-        /**/
+      display: flex;
+      flex-wrap: wrap;
+
       .photo-card-wrap {
         font-size: 16px;
         font-weight: lighter;
         margin-top: 25px;
         
-        @media screen and (min-width: 480px) {
+        img {
+          display: block;
+          width: 100%;
+          box-shadow: rgba(0,0,0, 0.17) 0px 2px 4px 0px;
+        }
+        
+        h2 {
+          color: #333;
+          font-size: 16px;
+          font-weight: lighter;
+        }
+        .articul {
+          color: #999; 
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:480px) {
+  .page__main { 
+    .main-banner-wrap {
+      .main-banner {
+        h1 {
+          font-size: 48px;
+          top: 35px;
+        }
+      }
+      .buttons {
+        padding-bottom: 40px;
+      }
+    }
+    
+    .banners-row {
+      .banner-wrap {
+        .second-banner {  
+          height: 471px;
+          
+          h1 {
+            font-size: 32px;
+            top: 28px;
+          }
+      
+          .side-text {
+            top: 140px;
+          }
+
+          .btn-container {
+            bottom: 40px;
+            left: 96px;
+            right: 96px;
+          }
+        }
+      }
+    }
+    .pluses-wrapper {
+      padding-top: 30px;
+      padding-bottom: 40px;
+
+      ul.pluses {
+        font-size: 24px;
+        padding: 0px 67px;
+      }
+    }
+    .most-populars {
+      overflow: hidden;
+      padding-top: 48px;
+      padding-bottom: 55px;
+      
+      h1 {
+        font-size: 32px;
+        margin-bottom: 0px;
+      }
+      
+      .photo-card-list {
+        .photo-card-wrap {
           float: left;
           width: 50%;
           
@@ -556,7 +318,107 @@
             padding-right: 10px;
           }
         }
-        @media screen and (min-width: 768px) {
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page__main { 
+    .main-banner-wrap {
+      .main-banner {
+        h1 {
+          top: 62px;
+        }
+        .btn-container {
+          bottom: 198px;
+          left: 255px;
+          right: 255px;
+        }
+      }
+      .buttons {
+        position: absolute;
+        padding: 0;
+        bottom: 36px;
+        margin-bottom: 0;
+        margin-top: 0;
+        text-align: center;
+        width: 100%;
+        
+        a {
+          display: inline-block;
+          margin-left: 20px;
+          color: white;
+          border-color: rgba(255,255,255,0.33);
+          
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    
+    .banners-row {
+      overflow: hidden;
+      .banner-wrap {
+        &:first-child {
+          margin-top: 2px;
+        }
+        float: left;
+        width: 50%;
+        
+        &:nth-child(2n+1) {
+          padding-right: 1px;
+        }
+        
+        &:nth-child(2n) {
+          padding-left: 1px;
+        }
+   
+        .second-banner {  
+          height: 376px;
+          
+          h1 {
+            font-size: 24px;
+          }
+
+
+          .btn-container {
+            left: 49px;
+            right: 49px;
+          }
+        }
+      }
+    }
+    .pluses-wrapper {
+      
+      padding-top: 60px;
+      padding-bottom: 18px;
+      
+      ul.pluses {
+        
+        padding: 0px;
+        overflow: hidden;
+        
+        & > li {
+          float: left;
+          width: 50%;
+          padding-left: 130px;
+          margin-bottom: 42px;
+          
+          & > div.wrapper {
+            left: 31px;
+          }
+        }
+      }
+    }
+    .most-populars {
+      h1 {
+        margin-bottom: -17px;
+      }
+      
+      .photo-card-list {
+        .photo-card-wrap {
           width: 33%;
           margin-top: 48px;
           
@@ -581,8 +443,92 @@
             padding-left: 10px;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 1000px) {
+  .page__main {  
+    .main-banner-wrap {
+      .main-banner {
+        height: 478px;
         
-        @media screen and (min-width: 1000px) {
+        h1 {
+          font-size: 64px;
+          top: 45px;
+        }
+        .btn-container {
+          left: 370px;
+          right: 370px;
+          bottom: 278px;
+        }
+      }
+      .buttons {
+        font-size: 18px;
+        bottom: 40px;
+        
+        a {
+          height: 66px;
+          line-height: 66px;
+          margin-left: 26px;
+          padding: 0px 32px 0px 78px;
+          
+          &.business:before, &.book:before, &.home:before {
+            height: 66px;
+          }
+        }
+      }
+    }
+    
+    .banners-row {
+      .banner-wrap {
+        .second-banner {  
+          height: 490px;
+          
+          h1 {
+            font-size: 32px;
+            top: 37px;
+          }
+          
+          .side-text {
+            top: 180px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .pluses-wrapper {
+      padding-top: 77px;
+      padding-bottom: 14px;
+
+      ul.pluses {
+        
+        padding: 0px 64px;
+        
+        & > li {
+          
+          margin: 0px 0px 65px;
+          height: 100px;
+          padding-right: 40px;
+          
+          & > div.wrapper {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            left: 0px;
+          }
+        }
+      }
+    }
+    .most-populars {
+    
+      h1 {
+        margin-bottom: -11px;
+      }
+      
+      .photo-card-list {
+        .photo-card-wrap {
           width: 25%;
           margin-top: 42px;
           
@@ -616,10 +562,89 @@
           &:nth-child(4n+4) {
             padding-left: 15px;
           }
-          
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page__main {  
+    .main-banner-wrap {
+      margin-top: 1px;
+      
+      .main-banner {
+        height: 799px;
         
-        @media screen and (min-width: 1280px) {
+        h1 {
+          font-size: 100px;
+          top: 127px;
+        }
+        .btn-container {
+          bottom: 466px;
+          
+          .wrapper {
+            max-width: 270px;
+            width: 40%;
+            margin: auto;
+          }
+        }
+      }
+      .buttons {
+        bottom: 81px;
+      }
+    }
+    
+    .banners-row {
+      .banner-wrap {
+        .second-banner {  
+          height: 940px;
+          
+          h1 {
+            font-size: 52px;
+            top: 80px;
+          }
+          
+          .side-text {
+            top: 300px;
+            font-size: 22px;
+          }
+
+          .btn-container {
+            bottom: 79px;
+            
+            .wrapper {
+              max-width: 300px;
+              width: 50%;
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+    .pluses-wrapper {
+      padding-top: 77px;
+      padding-bottom: 14px;
+      
+      ul.pluses {
+        font-size: 32px;
+        
+        & > li {
+          padding-right: 80px;
+        }
+      }
+    }
+    .most-populars {
+      padding-top: 81px;
+      padding-bottom: 95px;
+      
+      h1 {
+        font-size: 52px;
+        margin-bottom: 18px;
+      }
+      
+      .photo-card-list {
+        .photo-card-wrap {
           width: 16.666666%;
           
           &:nth-child(4n+1) {
@@ -667,21 +692,6 @@
           &:nth-child(6n) {
             padding-left: 25px;
           }
-        }
-        
-        img {
-          display: block;
-          width: 100%;
-          box-shadow: rgba(0,0,0, 0.17) 0px 2px 4px 0px;
-        }
-        
-        h2 {
-          color: #333;
-          font-size: 16px;
-          font-weight: lighter;
-        }
-        .articul {
-          color: #999; 
         }
       }
     }
