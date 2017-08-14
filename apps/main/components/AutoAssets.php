@@ -39,9 +39,13 @@ class AutoAssets extends Object
             // см. docs/misc-information.md
             throw new \Exception("Only CDN assets allowed, but not absolute url provided: " . $js);
         }
-        if (!preg_match('#\.css$#', $js)) {
+        // вероятно ошибка при копипасте (.css)
+        // p.s. убрал чтобы подключить google maps
+        /*
+        if (!preg_match('#\.js$#', $js)) {
             throw new \Exception($js . "is not a JS file.");
         }
+        */
         $this->_js[$this->mode][] = trim($js, '/');
     }
 
