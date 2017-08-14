@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&subset=cyrillic,cyrillic-ext');
+
 body {
   font-family: "Ubuntu";
   a {
@@ -157,26 +159,8 @@ body {
             border: none;
           }
           
-          &.main:before {
-            content: "";
-            background: url("./menu.png") no-repeat;
-            width: 19px;
-            height: 14px;
-            display: inline-block;
-            margin-right: 13px;
-            vertical-align: -1px;
-          }
-          
           &.submenu {
             padding: 0;
-          }
-          
-          &.opened {
-            background-color: #1c8675;
-            
-            &:after {
-              transform: rotate(180deg);
-            }
           }
             
           & > a {
@@ -437,6 +421,12 @@ body {
   .l__header {
     .navbar {
       .menu-wrap {
+        ul.menu > li > .submenu-header.opened {
+          background-color: #1c8675;
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
         ul.menu > li > ul.submenu-content.opened {
           display: block;
         }
@@ -619,7 +609,6 @@ body {
 
 
 @media screen and (min-width: 1000px) {
-  
   .l__header {
     .subheader {
       .search {
@@ -671,6 +660,18 @@ body {
               }
               .submenu-header:after {
                 transform: rotate(180deg);
+              }
+            }
+            
+            &.main {
+              &:before {
+                content: "";
+                background: url(menu.png) no-repeat;
+                width: 19px;
+                height: 14px;
+                display: inline-block;
+                margin-right: 13px;
+                vertical-align: -1px;
               }
             }
             
