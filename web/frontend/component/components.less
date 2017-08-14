@@ -1,25 +1,7 @@
-/*
- * Стили для компонентов, которые могут появляться на любых страницах в контенте.
- *
- * Подробнее о компонентах: https://github.com/cronfy/html-template/blob/master/docs/components.md
- * Общая документация: https://github.com/cronfy/html-template/blob/master/docs/README.md
- */
-
-@media screen and(min-width: 1280px)
-{
-  .c__inner {
-    margin: auto;
-    width: 1280px;
-  }
-} 
 .c__breadcrumbs {
   padding-top: 20px;
   padding-bottom: 21px;
   background-color: #f7f7f7;
-  
-  @media screen and (min-width: 480px) {
-    padding-bottom: 22px;
-  }
     
   ul.breadcrumbs {
     padding: 0;
@@ -41,36 +23,15 @@
         content: none;
       }
       
-      a {
-        //color: #00ad92;
-      }
-      
       h1 {
         font-size: 28px;
         font-weight: lighter;
         color: #000;
         margin: 0;
-        
-        @media screen and (min-width: 480px) {
-          font-size: 32px;
-        }
-        
-        @media screen and(min-width: 768px) {
-          font-size: 36px;
-        }
-        
-        @media screen and (min-width: 1000px) {
-          font-size: 42px;
-        }
-        
-        @media screen and (min-width: 1000px) {
-          font-size: 52px;
-        }
       }
     }
   }
 }
-/*==================*/
 
 .c__centered-image {
   position: relative;
@@ -86,11 +47,9 @@
     right: -100%;
     margin: auto;
     min-width: 100%;
-    /*todo что то тут искривляет картинку*/
     max-height: 110%;
   }
 }
-/*==================*/
 
 .c__banner {
   position: relative;
@@ -112,7 +71,6 @@
   }
 }
 
-/*============================*/
 .c__btn-block {
   display: block;
   height: 62px;
@@ -143,83 +101,48 @@
 .c__btn-default-line-height {
   line-height: initial;
 }
-/*==================================*/
 
 .c__seotext {    
-    padding-top: 29px;
-    padding-bottom: 35px;
-    
-    background-color: #f7f7f7;
-    font-weight: lighter;
-    line-height: 24px;
-    
-    @media screen and (min-width: 480px) {
-      padding-top: 50px;
-      padding-bottom :56px;
-    }
+  padding-top: 29px;
+  padding-bottom: 35px;
+  background-color: #f7f7f7;
+  font-weight: lighter;
+  line-height: 24px;
 
-    @media screen and (min-width: 1280px) {
-      padding-top: 83px;
-      padding-bottom: 93px;
-    }
-    
-    .inner {
-      @media screen and (min-width: 1000px) {
-        column-count: 2;
-      }
-      
-      @media screen and(min-width: 1280px) {
-        width: 1280px;
-        margin: auto;
-        padding: 0px 30px;
-      }
-    }
-    
-    h1 {
-      font-size: 28px;
-      font-weight: lighter;
-      text-align: center;
-      color: #333;
-      margin: 0 0 23px 0;
-      
-      @media screen and (min-width: 480px) {
-        font-size: 32px;
-        margin-bottom: 12px;
-      }
-      
-      @media screen and (min-width: 1280px) {
-        font-size: 52px;
-        margin-bottom: 37px;
-      }
-    }
-    p {
-      text-align: left;
-      font-size: 16px;
-      font-weight: lighter;
-      color: #333;
-      margin-bottom: 20px;
-    }
-    
-    p:last-child {
-      margin-bottom: 0px;
-    }
+  h1 {
+    font-size: 28px;
+    font-weight: lighter;
+    text-align: center;
+    color: #333;
+    margin: 0 0 23px 0;
   }
-/*===================================*/
   
+  p {
+    text-align: left;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #333;
+    margin-bottom: 20px;
+  }
   
+  p:last-child {
+    margin-bottom: 0px;
+  }
+}
 
 .c__photo-card {
   .img-wrap {
     overflow: hidden;
+    
     img {
       display: block;
       width: 100%;
       box-shadow: rgba(0,0,0, 0.17) 0px 2px 4px 0px;
-        
       transform: scale(1);
       transition: 0.3s ease-in-out;
     }
   }
+  
   &:hover .img-wrap img {
     transform: scale(1.3);
   }
@@ -233,26 +156,15 @@
       color: #333;
       font-size: 16px;
       font-weight: lighter;
-      
-      @media screen and (min-width: 1280px) {
-        margin-top: 23px;
-        font-size: 18px;
-      }
     }
+    
     .articul {
       color: #999;
       font-weight: lighter;
       font-size: 16px;
-      
-      @media screen and (min-width: 1280px) {
-        font-size: 18px;
-        margin-bottom: 13px;
-      }
     }
   }
 }
-  
-/*===================================*/
   
 div.c__vertical-centered-text {
   height: 100%;
@@ -270,24 +182,111 @@ div.c__vertical-centered-text {
   }
 }
 
-/*=================================*/
+@media screen and(max-width: 479px) {
+  .c__hide-320-480 {
+    display: none;
+  }
+}
 
-@media screen and (min-width: 480px)
-{
+@media screen and (min-width: 480px) {
+  .c__breadcrumbs {
+    padding-bottom: 22px;
+
+    ul.breadcrumbs {
+      & > li {
+        h1 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  .c__seotext {    
+    padding-top: 50px;
+    padding-bottom :56px;
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+  }
+
   .c__hide-480 {
     display: none;
   }
 }
 
-@media screen and (min-width: 768px)
-{
+@media screen and(max-width: 767px) {
+  .c__hide-320-768 
+  {
+    display: none;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c__breadcrumbs { 
+    ul.breadcrumbs {
+      & > li {
+        font-size: 36px;
+      }
+    }
+  }
+
   .c__hide-768 {
     display: none;
   }
 }
 
-@media screen and(max-width: 479px) {
-  .c__hide-320-480 {
-    display: none;
+@media screen and (min-width:1000px) {
+  .c__seotext {    
+    .columns {
+      column-count: 2;
+    }
+    
+    h1 {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .c__inner {
+    margin: auto;
+    width: 1280px;
+  }
+  
+  .c__breadcrumbs {
+    padding-top: 30px;
+    
+    ul.breadcrumbs {
+      & > li {
+        h1 {
+          font-size: 52px;
+        }
+      }
+    }
+  }
+
+  .c__seotext {    
+    padding-top: 83px;
+    padding-bottom: 93px;
+
+    h1 {
+      font-size: 52px;
+      margin-bottom: 37px;
+    }
+  }
+
+  .c__photo-card {
+    .description {
+      .caption {
+        margin-top: 23px;
+        font-size: 18px;
+      }
+      .articul {
+        font-size: 18px;
+        margin-bottom: 13px;
+      }
+    }
   }
 }

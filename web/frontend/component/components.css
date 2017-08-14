@@ -1,24 +1,7 @@
-/*
- * Стили для компонентов, которые могут появляться на любых страницах в контенте.
- *
- * Подробнее о компонентах: https://github.com/cronfy/html-template/blob/master/docs/components.md
- * Общая документация: https://github.com/cronfy/html-template/blob/master/docs/README.md
- */
-@media screen and (min-width: 1280px) {
-  .c__inner {
-    margin: auto;
-    width: 1280px;
-  }
-}
 .c__breadcrumbs {
   padding-top: 20px;
   padding-bottom: 21px;
   background-color: #f7f7f7;
-}
-@media screen and (min-width: 480px) {
-  .c__breadcrumbs {
-    padding-bottom: 22px;
-  }
 }
 .c__breadcrumbs ul.breadcrumbs {
   padding: 0;
@@ -44,27 +27,6 @@
   color: #000;
   margin: 0;
 }
-@media screen and (min-width: 480px) {
-  .c__breadcrumbs ul.breadcrumbs > li h1 {
-    font-size: 32px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .c__breadcrumbs ul.breadcrumbs > li h1 {
-    font-size: 36px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .c__breadcrumbs ul.breadcrumbs > li h1 {
-    font-size: 42px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .c__breadcrumbs ul.breadcrumbs > li h1 {
-    font-size: 52px;
-  }
-}
-/*==================*/
 .c__centered-image {
   position: relative;
   overflow: hidden;
@@ -79,10 +41,8 @@
   right: -100%;
   margin: auto;
   min-width: 100%;
-  /*todo что то тут искривляет картинку*/
   max-height: 110%;
 }
-/*==================*/
 .c__banner {
   position: relative;
 }
@@ -100,7 +60,6 @@
   right: 20px;
   bottom: 20px;
 }
-/*============================*/
 .c__btn-block {
   display: block;
   height: 62px;
@@ -127,7 +86,6 @@
 .c__btn-default-line-height {
   line-height: initial;
 }
-/*==================================*/
 .c__seotext {
   padding-top: 29px;
   padding-bottom: 35px;
@@ -135,48 +93,12 @@
   font-weight: lighter;
   line-height: 24px;
 }
-@media screen and (min-width: 480px) {
-  .c__seotext {
-    padding-top: 50px;
-    padding-bottom: 56px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .c__seotext {
-    padding-top: 83px;
-    padding-bottom: 93px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .c__seotext .inner {
-    column-count: 2;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .c__seotext .inner {
-    width: 1280px;
-    margin: auto;
-    padding: 0px 30px;
-  }
-}
 .c__seotext h1 {
   font-size: 28px;
   font-weight: lighter;
   text-align: center;
   color: #333;
   margin: 0 0 23px 0;
-}
-@media screen and (min-width: 480px) {
-  .c__seotext h1 {
-    font-size: 32px;
-    margin-bottom: 12px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .c__seotext h1 {
-    font-size: 52px;
-    margin-bottom: 37px;
-  }
 }
 .c__seotext p {
   text-align: left;
@@ -188,7 +110,6 @@
 .c__seotext p:last-child {
   margin-bottom: 0px;
 }
-/*===================================*/
 .c__photo-card .img-wrap {
   overflow: hidden;
 }
@@ -212,24 +133,11 @@
   font-size: 16px;
   font-weight: lighter;
 }
-@media screen and (min-width: 1280px) {
-  .c__photo-card .description .caption {
-    margin-top: 23px;
-    font-size: 18px;
-  }
-}
 .c__photo-card .description .articul {
   color: #999;
   font-weight: lighter;
   font-size: 16px;
 }
-@media screen and (min-width: 1280px) {
-  .c__photo-card .description .articul {
-    font-size: 18px;
-    margin-bottom: 13px;
-  }
-}
-/*===================================*/
 div.c__vertical-centered-text {
   height: 100%;
 }
@@ -243,19 +151,76 @@ div.c__vertical-centered-text > span {
   display: inline-block;
   vertical-align: middle;
 }
-/*=================================*/
+@media screen and (max-width: 479px) {
+  .c__hide-320-480 {
+    display: none;
+  }
+}
 @media screen and (min-width: 480px) {
+  .c__breadcrumbs {
+    padding-bottom: 22px;
+  }
+  .c__breadcrumbs ul.breadcrumbs > li h1 {
+    font-size: 32px;
+  }
+  .c__seotext {
+    padding-top: 50px;
+    padding-bottom: 56px;
+  }
+  .c__seotext h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
   .c__hide-480 {
     display: none;
   }
 }
+@media screen and (max-width: 767px) {
+  .c__hide-320-768 {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
+  .c__breadcrumbs ul.breadcrumbs > li {
+    font-size: 36px;
+  }
   .c__hide-768 {
     display: none;
   }
 }
-@media screen and (max-width: 479px) {
-  .c__hide-320-480 {
-    display: none;
+@media screen and (min-width: 1000px) {
+  .c__seotext .columns {
+    column-count: 2;
+  }
+  .c__seotext h1 {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .c__inner {
+    margin: auto;
+    width: 1280px;
+  }
+  .c__breadcrumbs {
+    padding-top: 30px;
+  }
+  .c__breadcrumbs ul.breadcrumbs > li h1 {
+    font-size: 52px;
+  }
+  .c__seotext {
+    padding-top: 83px;
+    padding-bottom: 93px;
+  }
+  .c__seotext h1 {
+    font-size: 52px;
+    margin-bottom: 37px;
+  }
+  .c__photo-card .description .caption {
+    margin-top: 23px;
+    font-size: 18px;
+  }
+  .c__photo-card .description .articul {
+    font-size: 18px;
+    margin-bottom: 13px;
   }
 }
