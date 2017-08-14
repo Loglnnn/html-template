@@ -1,22 +1,6 @@
 <?php
-/**
- * Главное:
- *      https://github.com/cronfy/html-template/blob/master/docs/README.md
- *
- * О шаблонах HTML:
- *      Расположение CSS, JS, картинок:
- *      https://github.com/cronfy/html-template/blob/master/docs/file-structure.md
- *      Требования к именованию классов и структуре CSS:
- *      https://github.com/cronfy/html-template/blob/master/docs/css-structure-and-naming.md
- *      Фиксированная структура для некоторых элементов HTML:
- *      https://github.com/cronfy/html-template/blob/master/docs/fixed-html.md
- *
- * Стандартная страница сайта.
- *
- * Для повторяющихся на разных страницах элементов - h1, хлебные крошки, пагинация и пр. - можно
- * использовать общий файл стилей `web/frontend/component/components.css`, чтобы избежать дублирования кода.
- *
- */
+  //см. contacts.php
+  $assets->addJs('https://maps.google.com/maps/api/js?sensor=false');
 ?>
 <div class="page__item container-fluid">
   <div class="c__breadcrumbs row">
@@ -33,7 +17,7 @@
     <div class="c__inner container-fluid">
       <div class="thumb">
         <div class="preview row">
-          <img src="/frontend/catalog/testimage.jpg" />
+          <img src="/frontend/item/testimage.jpg" />
         </div>
         <ul class="tags">
           <li><a href="#">Природа</a></li>
@@ -63,7 +47,7 @@
             <li <?php if($i==2) echo 'class="selected"' ?>>
               <div class="material-wrap">
                 <div class="img-wrap c__centered-image">
-                  <img src="/frontend/catalog/testimage.jpg" />
+                  <img src="/frontend/item/testimage.jpg" />
                 </div>
                 <div class="name">Штукатурка</div>
                 <?php if($i==2) echo '<div class="sale">20%</div>' ?>
@@ -135,7 +119,7 @@
       <div class="delivery-places">
         <h1>Пункты выдачи</h1>
         <div class="city">В Санкт-Петербурге</div>
-        <div class="map row">Карта</div>
+        <div class="map row" data-role="map"></div>
       </div>
     </div>
   </div>
@@ -147,7 +131,7 @@
           <div class="c__photo-card">
             <a href="#">
               <div class="img-wrap">
-                <img src="/frontend/main/testoboi.jpg" />
+                <img src="/frontend/item/testoboi.jpg" />
               </div>
               <div class="description">
                 <h2 class="caption">GreenBerry Дорога к <?php if($i%2 == 0) echo "загадочному"; ?> замку </h2>
@@ -219,4 +203,3 @@
     </div>
   </div>
 </div>
-

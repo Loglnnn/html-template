@@ -1,60 +1,16 @@
-/*
- * Главное:
- *      https://github.com/cronfy/html-template/blob/master/docs/README.md
- *
- * О файлах стилей:
- *      Расположение CSS, JS, картинок:
- *      https://github.com/cronfy/html-template/blob/master/docs/file-structure.md
- *      Требования к именованию классов и структуре CSS:
- *      https://github.com/cronfy/html-template/blob/master/docs/css-structure-and-naming.md
- *
- * Стили конкретной страницы: apps/main/views/template/example.php
- */
-
+/* mobile-first */
 .page__item {
   font-family: "Ubuntu";
   
-  /* стандарты заголовков */
   h1 {
     font-size: 28px;
     font-weight: lighter;
     text-align: center;
-    
-    @media screen and(min-width: 480px) {
-      font-size: 32px;
-    }
-    
   }
   
   .first-row {
-    @media screen and (min-width: 768px) {
-      padding-top: 21px;
-    }
-  
-    @media screen and (min-width: 1000px) {
-      overflow: hidden;
-      padding-top: 30px;
-    }
-    
     .thumb {
-      @media screen and (min-width: 1000px) {
-        float: left;
-        width: 60%;
-        padding-right: 20px;
-        
-        
-      }
-      
-      @media screen and (min-width: 1280px) {
-        width: 66.666666%
-      }
-      
       .preview {
-        
-        @media screen and (min-width: 768px) {
-          margin: 0;
-        }
-        
         img {
           width: 100%;
           box-shadow: rgba(0,0,0,0.17) 0px 2px 4px 0px;
@@ -67,15 +23,6 @@
         padding: 0;
         margin-top: 20px;
         margin-bottom: 4px;
-        
-        @media screen and (min-width: 480px) {
-          float: left;
-          margin: 30px 0px;
-        }
-        
-        @media screen and (min-width: 1000px) {
-          margin: 21px 0px;
-        }
         
         & > li {
           display: block;
@@ -97,10 +44,6 @@
           &:active {
             border-color: #006d5c;
           }
-          
-          @media screen and (min-width: 480px) {
-            margin-bottom: 0px;
-          }
         }
       }
     
@@ -108,48 +51,16 @@
         color: #999;
         font-size: 18px;
         font-weight: lighter;
-        
-        @media screen and (min-width: 480px) {
-          float: right;
-          line-height: 40px;
-          margin-top: 30px;
-        }
-        
-        @media screen and (min-width: 1000px) {
-          margin-top: 21px;
-          margin-right: 10px;
-        }
       }
     }
     
     .inputs {
-      @media screen and (min-width:480px) {
-        margin: 0;
-      }
-      
-      @media screen and (min-width: 1000px) {
-        width: 40%;
-        float: right;
-      }
-    
-      @media screen and (min-width: 1280px) {
-        width: 33.333333%
-      }
-      
       .dim_input {
         margin-top: 23px;
         padding-top: 11px;
         padding-bottom: 30px;
         background-color: #f7f7f7;
         overflow: hidden;
-        
-        @media screen and (min-width: 480px) {
-          clear: both;
-        }
-        
-        @media screen and (min-width: 768px) {
-          margin: 0;
-        }
         
         .input_container {
           float: left;
@@ -198,8 +109,6 @@
               &.right {
                 border-radius: 0 5px 5px 0;
               }
-              
-              
             }
           }
         }
@@ -208,27 +117,11 @@
       .material-list {
         padding-top: 30px;
       
-        @media screen and (min-width:480px) {
-          margin: 0;
-        }
-      
         & > ul {
           list-style: none;
           overflow: hidden;
           padding: 0;
           margin: 0;
-          
-          @media screen and (min-width: 480px) {
-            margin: 0;
-          }
-          
-          @media screen and (min-width: 768px) {
-            margin-bottom: 19px;
-          }
-          
-          @media screen and (min-width: 1000px) {
-            margin-bottom: 11px;
-          }
           
           & > li {
             display: block;
@@ -249,37 +142,6 @@
               padding-left: 2px;
             }
             
-            @media screen and (min-width: 480px) {
-              width: 25%;
-              margin-bottom: 24px;
-              
-              &:nth-child(3n+1) {
-                padding-right: 0px;
-              }
-              
-              &:nth-child(3n+2) {
-                padding-right: 0px;
-                padding-left: 0px;
-              }
-              
-              &:nth-child(3n+3) {
-                padding-left: 0px;
-              }
-              
-              &:nth-child(n) {
-                padding-left: 2px;
-              }
-            }
-            
-            @media screen and (min-width: 768px) {
-              width: 12.5%;
-              margin-bottom: 0;
-            }
-            
-            @media screen and(min-width:1000px) {
-              width: 25%;
-            }
-            
             .material-wrap {
               position: relative;
               
@@ -295,14 +157,6 @@
                 text-align: center;
                 margin-top: 7px;
                 color: #666;
-                
-                @media screen and (min-width: 768px) {
-                  margin-top: 2px;
-                }
-                
-                @media screen and (min-width: 1000px) {
-                  margin-bottom: 5px;
-                }
               }
               
               div.sale {
@@ -328,8 +182,6 @@
             }
           }
         }
-        
-        
       }
     }
     .price {
@@ -338,10 +190,6 @@
       font-weight: lighter;
       color: #000;
       margin-bottom: 17px;
-      @media screen and (min-width: 768px) {
-        margin-bottom: 23px;
-      }
-      
       
       .old {
         font-size: 24px;
@@ -349,49 +197,16 @@
         text-decoration: line-through;
       }
     }
-    
   }
   
   .second-row {
-    @media screen and (min-width: 1000px) {
-      overflow: hidden;
-      padding-top: 38px;
-    }
-    
     .form {
       margin-top: 41px;
-      
-      @media screen and(min-width:480px) {
-        margin-top: 47px;
-      }
-      
-      @media screen and(min-width:768px) {
-        margin-top: 37px;
-      }
-      
-      @media screen and(min-width:1000px) {
-        float: left;
-        width: 60%;
-        padding-right: 20px;
-        margin-top: 0px;
-      }
-      
-      @media screen and (min-width: 1280px) {
-        width: 66.666666%
-      }
       
       h1 {
         font-size: 28px;
         font-weight: lighter;
         color: #333;
-        
-        @media screen and(min-width:480px) {
-          font-size: 32px;
-        }
-        
-        @media screen and(min-width:1000px) {
-          margin: 0 0 13px;
-        }
       }
       
       .call {
@@ -399,14 +214,6 @@
         font-size: 16px;
         color: #999;
         margin-bottom: 13px;
-        
-        @media screen and(min-width:480px) {
-          margin-bottom: 25px;
-        }
-        
-        @media screen and(min-width:1000px) {
-          margin-bottom: 17px;
-        }
       }
       
       .fields {
@@ -415,51 +222,11 @@
         line-height: 1.2;
         background-color: #f7f7f7;
         
-        @media screen and (min-width: 768px) {
-          margin: 0;
-          padding: 0 30px 32px;
-          overflow: hidden;
-          display: flex;
-          flex-wrap: wrap;
-        }
-        
-        @media screen and (min-width: 1000px) {
-          padding-bottom: 46px;
-        }
-        
         .field {
           margin-top: 11px;
           margin-bottom: 0;
           width: 100%;
-          
-          @media screen and (min-width: 768px) {
-            margin-top: 24px;
-          }
-          
-          &.half-768 {
-            @media screen and (min-width: 768px) {
-              width: 50%;
-              float: left;
-              
-              &:nth-child(2n+1) {
-                padding-left: 10px;
-              }
-              
-              &:nth-child(2n+2) {
-                padding-right: 10px;
-              }
-            }
-            &.half-fullwidth-1000 {
-              @media screen and (min-width: 1000px) {
-                margin-right: 50%;
-                padding-left: 0px;
-                padding-right: 0px;
-              }
-            }
-          }
-          
-          
-          
+
           label {
             display: block;
             color: #999;
@@ -473,15 +240,6 @@
               margin-bottom: 20px;
               text-align: center;
               color: #333;
-              
-              @media screen and (min-width:768px) {
-                text-align: left;
-              }
-              
-              @media screen and (min-width:1000px) {
-                margin-top: 6px;
-                margin-bottom: 6px;
-              }
             }
           }
           
@@ -497,11 +255,13 @@
           }
           
           input[type="checkbox"], select {
-            position: relative;
+            position: relative;            
             appearance: none;
+            /* убрать, если автопрефиксер все сделает сам */
             -webkit-appearance: none;
             -moz-appearance: none;
           }
+          
           /* специально для IE11 (убирает стрелку у select) */
           select::-ms-expand {
             display: none;
@@ -559,7 +319,6 @@
           &.has-error .help-block {
             display: block;
           }
-          
         }
       }
     } 
@@ -567,24 +326,6 @@
     .delivery-places {
       text-align: center;
       padding-top: 41px;
-      
-      @media screen and(min-width:480px) {
-        padding-top: 46px;
-      }
-      
-      @media screen and(min-width:768px) {
-        padding-top: 34px;
-      }
-      
-      @media screen and(min-width:1000px) {
-        float: right;
-        width: 40%;
-        padding-top: 0px;
-      }
-      
-      @media screen and (min-width: 1280px) {
-        width: 33.333333%
-      }
       
       h1 {
         margin: 0 0 13px;
@@ -595,10 +336,6 @@
         font-size: 16px;
         color: #00ad92;
         margin-bottom: 22px;
-        
-        @media screen and(min-width:768px) {
-          margin-bottom: 17px;
-        }
         
         &:after {
           content: "";
@@ -613,15 +350,6 @@
       
       .map {
         height: 200px;
-        border: 1px solid black;
-        
-        @media screen and(min-width:768px) {
-          margin: 0;
-        }
-        
-        @media screen and(min-width:1000px) {
-          height:501px;
-        }
       }
     }
   }
@@ -629,10 +357,6 @@
   .similar {
     padding-top: 48px;
     padding-bottom: 25px;
-    
-    @media screen and (min-width: 480px) {
-      padding-bottom: 55px;
-    }
     
     h1 { 
       margin: 0;
@@ -643,100 +367,528 @@
       display: flex;
       flex-wrap: wrap;
       overflow: hidden;
-      
-      @media screen and (min-width: 480px) {
-        margin-top: -3px;
-      }
-    
-      @media screen and (min-width: 768px) {
-        margin-top: -21px;
-      }
-    
-      @media screen and (min-width: 1280px) {
-        margin-top: -5px;
-      }
     
       .similar-card-wrap {
         margin-top: 25px;
+      }
+    }
+  }
+  
+  .description {
+    .tab-head {
+      position:relative;
+      display: block;
+      overflow: hidden;
+      background-color: #f7f7f7;
+      text-align: center;
+      height: 75px;
+      
+      &:before {
+        content:"";
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        bottom: 0px;
+        height: 2px;
+        background-color: white;
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        display: inline-block;
+      }
+      
+      ul > li {
+        float: left;
+        position: relative;
+        height: 75px;
+        line-height: 73px;
+        padding: 0px 15px 0px 10px;
+        border-bottom: 2px solid white;
+        font-weight: bold;
+        font-size: 16px;
+        color: #00ad92;
+        text-transform: uppercase;
+        cursor: pointer;
         
-       
-        @media screen and (min-width: 480px) {
+        &:hover {
+          color:#00d6b5;
+        }
+        
+        &.active {
+          color: #000;
+          border-color: #00ad92;
+        }
+      }
+    }
+    
+    .tab-container {
+      background-color: #f7f7f7;
+      
+      .tab {
+        display: none;
+        padding-top: 28px;
+        padding-bottom: 31px;
+        
+        &.active {
+          display: block;
+        }
+      
+        .caption {
+          margin-top: 40px;
+          margin-bottom: 13px;
+          font-size: 24px;
+          font-weight: lighter;
+          color: #333;
+          
+          &:first-child {
+            margin-top: 0px;
+          }
+        }
+        
+        p {
+          margin-bottom: 22px;
+          color: #333;
+          font-size: 16px;
+          font-weight: light;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .page__item {
+    h1 {
+      font-size: 32px;
+    }
+    
+    .first-row {
+      .thumb {
+        ul.tags {
+          float: left;
+          margin: 30px 0px;
+          & > li {
+            margin-bottom: 0px;
+          }
+        }
+
+        .articul {
+          float: right;
+          line-height: 40px;
+          margin-top: 30px;
+        }
+      }
+      
+      .inputs {
+        margin: 0;
+        
+        .dim_input {
+          clear: both;
+        }
+        
+        .material-list {
+          margin: 0;
+
+          & > ul {
+            margin: 0;
+            
+            & > li {
+              width: 25%;
+              margin-bottom: 24px;
+              
+              &:nth-child(3n+1) {
+                padding-right: 0px;
+              }
+              
+              &:nth-child(3n+2) {
+                padding-right: 0px;
+                padding-left: 0px;
+              }
+              
+              &:nth-child(3n+3) {
+                padding-left: 0px;
+              }
+              
+              &:nth-child(n) {
+                padding-left: 2px;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .second-row {
+      .form {
+        margin-top: 47px;
+        
+        h1 {
+          font-size: 32px;
+        }
+        
+        .call {
+          margin-bottom: 25px;
+        }
+      } 
+      
+      .delivery-places {
+        padding-top: 46px;
+      }
+    }
+    
+    .similar {
+      padding-bottom: 55px;
+      
+      .similar-card-list {
+        margin-top: -3px;
+
+        .similar-card-wrap {
           float: left;
           width: 50%;
-          
+
           &:nth-child(2n) {
             padding-left: 10px;
           }
-          
+
           &:nth-child(2n+1) {
             padding-right: 10px;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page__item {
+    .first-row {
+      padding-top: 21px;
+    
+      .thumb {
+        .preview {
+          margin: 0;
+        }
+      }
+      
+      .inputs {
+        .dim_input {
+          margin: 0;
+        }
         
-        @media screen and (min-width: 768px) {
+        .material-list {
+          & > ul {
+            margin-bottom: 19px;
+
+            & > li {
+              width: 12.5%;
+              margin-bottom: 0;
+              
+              .material-wrap {
+                div.name {
+                  margin-top: 2px;
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      .price {
+        margin-bottom: 23px;
+      }
+    }
+    
+    .second-row {
+      .form {
+        margin-top: 37px;
+        
+        .fields {
+          margin: 0;
+          padding: 0 30px 32px;
+          overflow: hidden;
+          display: flex;
+          flex-wrap: wrap;
+          
+          .field {
+            margin-top: 24px;
+            
+            &.half-768 {
+              width: 50%;
+              float: left;
+
+              &:nth-child(2n+1) {
+                padding-left: 10px;
+              }
+
+              &:nth-child(2n+2) {
+                padding-right: 10px;
+              }
+            }
+            
+            label {
+              &.checkbox {
+                text-align: left;
+              }
+            }
+          }
+        }
+      } 
+      
+      .delivery-places {
+        padding-top: 34px;
+
+        .city {
+          margin-bottom: 17px;
+        }
+        
+        .map {
+          margin: 0;
+        }
+      }
+    }
+    
+    .similar {
+      padding-top: 36px;
+      
+      .similar-card-list {
+        margin-top: -8px;
+
+        .similar-card-wrap {
           float: left;
           width: 33.333333%;
-          
+
           &:nth-child(2n) {
             padding-left: 0px;
           }
-          
+
           &:nth-child(2n+1) {
             padding-right: 0px;
           }
-          
+
           &:nth-child(3n) {
             padding-left: 10px;
           }
-          
+
           &:nth-child(3n+1) {
             padding-right: 10px;
           }
-          
+
           &:nth-child(3n+2) {
             padding-right: 5px;
             padding-left: 5px;
           }
         }
+      }
+    }
+    
+    .description {
+      .tab-head {
+        ul > li {
+          font-size: 18px;
+        }
+      }
+      
+      .tab-container {
+        .tab {
+          padding-top: 48px;
+          padding-bottom: 52px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .page__item {
+    .first-row {
+      overflow: hidden;
+      padding-top: 30px;
+      
+      .thumb {
+        float: left;
+        width: 60%;
+        padding-right: 20px;
         
-        @media screen and (min-width: 1000px) {
+        ul.tags {
+          margin: 21px 0px;
+        }
+
+        .articul {
+          margin-top: 21px;
+          margin-right: 10px;
+        }
+      }
+      
+      .inputs {
+        width: 40%;
+        float: right;
+
+        .material-list {
+
+          & > ul {
+            margin-bottom: 11px;
+
+            & > li {
+              width: 25%;
+              
+              .material-wrap {
+                div.name {
+                  margin-bottom: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .second-row {
+      overflow: hidden;
+      padding-top: 38px;
+      
+      .form {
+        float: left;
+        width: 60%;
+        padding-right: 20px;
+        margin-top: 0px;
+        
+        h1 {
+          margin: 0 0 13px;
+          text-align: left;
+        }
+        
+        .call {
+          margin-bottom: 17px;
+          text-align: left;
+        }
+        
+        .fields {
+          padding-bottom: 46px;
+          
+          .field {
+            &.half-768 {
+              &.half-fullwidth-1000 {
+                margin-right: 50%;
+                padding-left: 0px;
+                padding-right: 0px;
+              }
+            }
+  
+            label {
+              &.checkbox {
+                margin-top: 6px;
+                margin-bottom: 6px;
+              }
+            }
+          }
+        }
+      } 
+      
+      .delivery-places {
+        float: right;
+        width: 40%;
+        padding-top: 0px;
+        
+        h1 {
+          text-align: left;
+        }
+        
+        .city {
+          text-align: left;
+        }
+        
+        .map {
+          height:501px;
+        }
+      }
+    }
+    
+    .similar {
+      padding-top: 50px;
+      
+      .similar-card-list {
+        margin-top: -24px;
+
+        .similar-card-wrap {
           width: 25%;
           margin-top: 42px;
-          
+
           &:nth-child(3n+1) {
             padding-right: 0px;
           }
-          
+
           &:nth-child(3n+2) {
             padding-left: 0px;
             padding-right: 0px;
           }
-          
+
           &:nth-child(3n+3) {
             padding-left: 0px;
           }
-          
+
           &:nth-child(4n+1) {
             padding-right: 15px;
           }
-          
+
           &:nth-child(4n+2) {
             padding-right: 10px;
             padding-left: 5px;
           }
-          
+
           &:nth-child(4n+3) {
             padding-right: 5px;
             padding-left: 10px;
           }
-          
+
           &:nth-child(4n+4) {
             padding-left: 15px;
           }
-          
         }
+      }
+    }
+    
+    .description {
+      .tab-container {
+        .tab {
+          padding: 48px 63px 52px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 1280px) {
+  .page__item {
+    .first-row {
+      .thumb {
+        width: 66.666666%
+      }
+      
+      .inputs {
+        width: 33.333333%
+      }
+    }
+    
+    .second-row {
+      .form {
+        width: 66.666666%
+      } 
+      
+      .delivery-places {
+        width: 33.333333%
+      }
+    }
+    
+    .similar {
+      .similar-card-list {
+        margin-top: -5px;
         
-        @media screen and (min-width: 1280px) {
+        .similar-card-wrap {
           width: 16.666666%;
           
           &:nth-child(4n+1) {
@@ -784,105 +936,6 @@
           &:nth-child(6n) {
             padding-left: 25px;
           }
-        }
-      }
-    }
-  }
-  
-  .description {
-    .tab-head {
-      position:relative;
-      display: block;
-      overflow: hidden;
-      background-color: #f7f7f7;
-      text-align: center;
-      height: 75px;
-      
-      &:before {
-        content:"";
-        position: absolute;
-        width: 100%;
-        left: 0px;
-        bottom: 0px;
-        height: 2px;
-        background-color: white;
-      }
-      
-      ul {
-        list-style: none;
-        padding: 0;
-        margin-left: 0;
-        margin-bottom: 0;
-        display: inline-block;
-      }
-      
-      ul > li {
-        //display: block;
-        float: left;
-        position: relative;
-        height: 75px;
-        line-height: 73px;
-        padding: 0px 15px 0px 10px;
-        border-bottom: 2px solid white;
-        font-weight: bold;
-        font-size: 16px;
-        color: #00ad92;
-        text-transform: uppercase;
-        cursor: pointer;
-        &:hover {
-          color:#00d6b5;
-        }
-        &.active {
-          color: #000;
-          border-color: #00ad92;
-        }
-        
-        @media screen and(min-width:768px) {
-          font-size: 18px;
-        }
-      }
-    }
-    
-    .tab-container {
-      background-color: #f7f7f7;
-      
-      .tab {
-        display: none;
-        padding-top: 28px;
-        padding-bottom: 31px;
-        
-        &.active {
-          display: block;
-        }
-        
-        @media screen and (min-width: 768px) {
-          padding-top: 48px;
-          padding-bottom: 52px;
-        }
-        
-        @media screen and (min-width: 1000px) {
-          padding: 48px 63px 52px;
-
-        }
-      
-        .caption {
-          margin-top: 40px;
-          margin-bottom: 13px;
-          font-size: 24px;
-          font-weight: lighter;
-          color: #333;
-          
-          &:first-child {
-            margin-top: 0px;
-          }
-        }
-        
-        p {
-          margin-bottom: 22px;
-          color: #333;
-          font-size: 16px;
-          font-weight: light;
-          line-height: 1.5;
         }
       }
     }
