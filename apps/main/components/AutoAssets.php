@@ -28,8 +28,19 @@ class AutoAssets extends Object
             // см. docs/misc-information.md
             throw new \Exception("Only CDN assets allowed, but not absolute url provided: " . $css);
         }
-        if (!preg_match('#\.css$#', $css)) {
-            throw new \Exception($css . "is not a CSS file.");
+        $allowed = [
+            '#\.css#', // явные css файлы
+        ];
+        $path = parse_url($css)['path'];
+        $matched = false;
+        foreach ($allowed as $regex) {
+            if (preg_match($regex, $path)) {
+                $matched = true;
+                break;
+            }
+        }
+        if (!$matched) {
+            throw new \Exception($css . " is not a CSS file.");
         }
         $this->_css[$this->mode][] = trim($css, '/');
     }
@@ -39,13 +50,21 @@ class AutoAssets extends Object
             // см. docs/misc-information.md
             throw new \Exception("Only CDN assets allowed, but not absolute url provided: " . $js);
         }
-        // вероятно ошибка при копипасте (.css)
-        // p.s. убрал чтобы подключить google maps
-        /*
-        if (!preg_match('#\.js$#', $js)) {
-            throw new \Exception($js . "is not a JS file.");
+        $allowed = [
+            '#\.js$#', // явные js файлы
+            '#/[^/.]+/?$#', // просто путь без расширения, например https://maps.googleapis.com/maps/api/js
+        ];
+        $path = parse_url($js)['path'];
+        $matched = false;
+        foreach ($allowed as $regex) {
+            if (preg_match($regex, $path)) {
+                $matched = true;
+                break;
+            }
         }
-        */
+        if (!$matched) {
+            throw new \Exception($js . " is not a JS file.");
+        }
         $this->_js[$this->mode][] = trim($js, '/');
     }
 
