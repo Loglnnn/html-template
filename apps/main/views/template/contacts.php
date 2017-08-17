@@ -32,14 +32,13 @@
         <div class="social-block">
           <div id="vk_widget"></div>
         </div>
-        <div class="social-block" id="fb-root">
+        <div class="social-block">
           <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="false" data-width="386" data-height="400" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- это нужно дял работы Facebook виджета -->
+<!-- это нужно для работы Facebook виджета -->
 <div id="fb-root"></div>
 <!---->
-<script type="text/javascript" src=""></script>

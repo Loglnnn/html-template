@@ -91,18 +91,18 @@
           <div class="field half-768 form-group ">
             <label for="delivery-method">Способ доставки</label>
             <select id="delivery-method">
-              <option id="option1">option1</option>
-              <option id="option2">option2</option>
-              <option id="option3">option3</option>
+              <option id="option11">option11</option>
+              <option id="option12">option12</option>
+              <option id="option13">option13</option>
             </select>
             <div class="help-block">Help Block</div>
           </div>
           <div class="field half-768 form-group ">
             <label for="delivery-place">Пункт выдачи</label>
             <select id="delivery-place">
-              <option id="option1">option1</option>
-              <option id="option2">option2</option>
-              <option id="option3">option3</option>
+              <option id="option21">option21</option>
+              <option id="option22">option22</option>
+              <option id="option23">option23</option>
             </select>
             <div class="help-block">Help Block</div>
           </div>
