@@ -74,7 +74,6 @@
 }
 .page__item .first-row .inputs .dim_input .input_container .length-input input[type="text"] {
   width: 100%;
-  font-size: 16px;
   border: 1px solid #e0e0e0;
   padding: 0 45px 0 10px;
   height: 50px;
@@ -214,9 +213,6 @@
 .page__item .second-row .form .fields .field select {
   position: relative;
   appearance: none;
-  /* убрать, если автопрефиксер все сделает сам */
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 .page__item .second-row .form .fields .field select::-ms-expand {
   display: none;
@@ -376,7 +372,7 @@
   margin-bottom: 22px;
   color: #333;
   font-size: 16px;
-  font-weight: light;
+  font-weight: lighter;
   line-height: 1.5;
 }
 @media screen and (min-width: 480px) {

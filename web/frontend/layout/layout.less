@@ -31,7 +31,6 @@ body {
       position: relative;
       float: left;
       min-width: 109px;
-      width: 40%;
       width: ~"calc(100% - 190px)";
       height: 42px;
       border-radius: 5px;
@@ -103,7 +102,9 @@ body {
       top: 0;
       left: 0;
       right: 0;
-      z-index: 30; /*поверх всех элементов страницы*/
+      /* используется при прилипшем хедере 
+         и перекрывает всю страницу */
+      z-index: 2; 
     }
     
     .menu-wrap {
@@ -137,7 +138,8 @@ body {
         list-style: none;
         position: absolute;
         display: none;
-        z-index: 10; /* выводим поверх страницы */
+        /* меню - перекрывает всю страницу */
+        z-index: 10;
         width: 100%;
         background-color: #00977f;
         text-align: left;
@@ -417,24 +419,6 @@ body {
   }
 }
 
-@media screen and (max-width:999px) {
-  .l__header {
-    .navbar {
-      .menu-wrap {
-        ul.menu > li > .submenu-header.opened {
-          background-color: #1c8675;
-          &:after {
-            transform: rotate(180deg);
-          }
-        }
-        ul.menu > li > ul.submenu-content.opened {
-          display: block;
-        }
-      }
-    }
-  }
-}
-
 @media screen and (min-width:480px) {
   .l__header {
     .subheader {
@@ -448,7 +432,6 @@ body {
       }
         
       .search {
-        width: 23%;
         width: ~"calc(100% - 350px)";
         margin-bottom: 0px;
         margin-top: 15px;
@@ -502,7 +485,6 @@ body {
         margin-right: 18px;
       }
       .search {
-        width: 38%;
         width: ~"calc(100% - 432px)"; 
       }
     }
@@ -594,7 +576,6 @@ body {
       
       .links {
         float: left;
-        width: 60%;
         width: ~"calc(100% - 280px)";
       }
       
@@ -606,13 +587,28 @@ body {
   }  
 }
 
-
+@media screen and (max-width:999px) {
+  .l__header {
+    .navbar {
+      .menu-wrap {
+        ul.menu > li > .submenu-header.opened {
+          background-color: #1c8675;
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+        ul.menu > li > ul.submenu-content.opened {
+          display: block;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (min-width: 1000px) {
   .l__header {
     .subheader {
       .search {
-        width: 24.8%;
         width: ~"calc(100% - 722px)";
       }
       .contacts {
@@ -705,7 +701,8 @@ body {
               white-space: nowrap;
               position: absolute;
               top: 50px;
-              z-index: 10; /* поверх страницы */
+              /* выпадающее меню - перекрывает всю страницу */
+              z-index: 2;
 
               & > li {
                 line-height: 28px;
@@ -749,7 +746,6 @@ body {
 
       .links {
         float: left;
-        width: 52%;
         width: ~"calc(100% - 460px)";
       }
       

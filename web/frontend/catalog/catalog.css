@@ -46,8 +46,7 @@
   outline: none;
   font-size: 0;
   position: absolute;
-  z-index: 10;
-  /* поверх слайдера */
+  z-index: 1; /* поверх слайдера slick (div.matereial-slider) */
   top: 35%;
 }
 .page__catalog .material-slider .slick-prev {
@@ -114,9 +113,6 @@
   line-height: 50px;
   padding: 0px 20px;
   appearance: none;
-  /* убрать, если автопрефиксер все сделает сам */
-  -webkit-appearance: none;
-  -moz-appearance: none;
   border: 1px solid #e0e0e0;
   border-radius: 5px;
   background: white url("arrow-down-blue.svg") no-repeat;
@@ -181,7 +177,7 @@
   display: block;
   margin: 0;
   padding: 30px 0;
-  border-radius: none;
+  border-radius: 0;
 }
 .page__catalog .pagination .pagelist-wrap {
   display: block;
