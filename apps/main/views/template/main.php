@@ -1,7 +1,7 @@
 <div class="page__main container-fluid">
   <div class="main-banner-wrap row">
     <div class="c__banner main-banner">
-      <div class="main-slider">
+      <div class="main-slider" data-role="main-slider">
         <div class="c__centered-image overlayed">
           <img src="/frontend/main/banner.jpg" />
         </div>
@@ -17,9 +17,9 @@
       </div>
     </div>
     <div class="buttons container-fluid">
-      <a href="#" class="home"><div class="c__vertical-centered-text"><span>Для дома</span></div></a>
-      <a href="#" class="book"><div class="c__vertical-centered-text"><span>Для детских учреждений</span></div></a>
-      <a href="#" class="business"><div class="c__vertical-centered-text"><span>Для бизнеса</span></div></a>
+      <a href="#" class="btn home"><div class="c__vertical-centered-text"><span>Для дома</span></div></a>
+      <a href="#" class="btn book"><div class="c__vertical-centered-text"><span>Для детских учреждений</span></div></a>
+      <a href="#" class="btn business"><div class="c__vertical-centered-text"><span>Для бизнеса</span></div></a>
     </div>
   </div>
   

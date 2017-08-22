@@ -51,6 +51,7 @@
 .page__item .first-row .inputs .dim_input .input_container {
   float: left;
   width: 50%;
+  margin-bottom: 0px;
 }
 .page__item .first-row .inputs .dim_input .input_container label {
   display: block;
@@ -89,6 +90,13 @@
 }
 .page__item .first-row .inputs .dim_input .input_container .length-input input[type="text"].right {
   border-radius: 0 5px 5px 0;
+}
+.page__item .first-row .inputs .dim_input .input_container .help-block {
+  display: none;
+  text-align: center;
+}
+.page__item .first-row .inputs .dim_input .input_container.has-error .help-block {
+  display: block;
 }
 .page__item .first-row .inputs .material-list {
   padding-top: 30px;

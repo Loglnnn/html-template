@@ -65,6 +65,7 @@
         .input_container {
           float: left;
           width: 50%;
+          margin-bottom: 0px;
           
           label {
             display: block;
@@ -109,6 +110,15 @@
                 border-radius: 0 5px 5px 0;
               }
             }
+          }
+          
+          .help-block {
+            display: none;
+            text-align: center;
+          }
+          
+          &.has-error .help-block {
+            display: block;
           }
         }
       }

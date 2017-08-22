@@ -92,7 +92,7 @@ body a:active {
   left: 0;
   right: 0;
   /* используется при прилипшем хедере 
-     и перекрывает всю страницу */
+         и перекрывает всю страницу */
   z-index: 2;
 }
 .l__header .navbar .menu-wrap {
@@ -124,7 +124,7 @@ body a:active {
   position: absolute;
   display: none;
   /* меню - перекрывает всю страницу */
-  z-index: 2;
+  z-index: 1;
   width: 100%;
   background-color: #00977f;
   text-align: left;

@@ -1,7 +1,7 @@
 "use strict";
 
 $(document).ready(function () {
-  $(".material-slider").slick(
+  $("*[data-role='material-slider']").slick(
   {
     slidesToShow: 2,
     slidesToScroll: 2,

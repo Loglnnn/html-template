@@ -70,6 +70,7 @@
   letter-spacing: 1px;
   font-weight: bold;
   padding: 0;
+  width: 100%;
 }
 .c__btn-filled {
   background-color: #00ad92;
@@ -138,16 +139,16 @@
   font-weight: lighter;
   font-size: 16px;
 }
-div.c__vertical-centered-text {
+.c__vertical-centered-text {
   height: 100%;
 }
-div.c__vertical-centered-text:before {
+.c__vertical-centered-text:before {
   content: "";
   vertical-align: middle;
   height: 100%;
   display: inline-block;
 }
-div.c__vertical-centered-text > span {
+.c__vertical-centered-text > span {
   display: inline-block;
   vertical-align: middle;
 }

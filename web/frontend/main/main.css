@@ -12,6 +12,12 @@
 .page__main .main-banner-wrap .main-banner .main-slider {
   height: 100%;
 }
+.page__main .main-banner-wrap .main-banner .main-slider > div {
+  display: none;
+}
+.page__main .main-banner-wrap .main-banner .main-slider > div:first-child {
+  display: block;
+}
 .page__main .main-banner-wrap .main-banner .main-slider .slick-list,
 .page__main .main-banner-wrap .main-banner .main-slider .slick-track,
 .page__main .main-banner-wrap .main-banner .main-slider .slick-slide {
@@ -54,6 +60,8 @@
   height: 53px;
   margin-top: 10px;
   position: relative;
+  vertical-align: initial;
+  font-size: 18px;
 }
 .page__main .main-banner-wrap .buttons a:hover {
   border-color: #00d6b5;

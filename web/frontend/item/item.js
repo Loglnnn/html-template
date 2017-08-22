@@ -9,7 +9,7 @@ $(document).ready(function () {
       e.preventDefault();
       headers.removeClass("active");
       $(e.target).addClass("active");
-      containersRoot.find(".tab").removeClass("active");
+      containersRoot.find("*[data-tab-id]").removeClass("active");
       var container = containersRoot.find('*[data-tab-id="' + e.target.getAttribute("data-tab-id") + '"]');
       container.addClass("active");
       

@@ -46,7 +46,8 @@
   outline: none;
   font-size: 0;
   position: absolute;
-  z-index: 1; /* поверх слайдера slick (div.matereial-slider) */
+  /* поверх слайдера slick (div.matereial-slider) */
+  z-index: 1;
   top: 35%;
 }
 .page__catalog .material-slider .slick-prev {
@@ -60,6 +61,8 @@
 .page__catalog .material-slider .material-thumb {
   position: relative;
   padding: 1px;
+  width: 50%;
+  float: left;
 }
 .page__catalog .material-slider .material-thumb .material-image {
   height: 197px;
@@ -75,6 +78,8 @@
   border-radius: 5px;
   color: #333;
   text-align: center;
+  padding: 0;
+  border: none;
 }
 .page__catalog .material-slider ul.slick-dots {
   list-style: none;
@@ -201,6 +206,11 @@
   line-height: 30px;
   text-align: center;
 }
+.page__catalog .pagination .pagelist-wrap ul.pagelist > li > a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
 .page__catalog .pagination .pagelist-wrap ul.pagelist > li > a:hover {
   color: black;
   text-decoration: none;
@@ -225,6 +235,9 @@
   /* mobile-first */
   .page__catalog .product-list-wrap .product-list {
     column-count: 2;
+  }
+  .page__catalog .material-slider .material-thumb {
+    width: 33%;
   }
   .page__catalog .pagination .pagelist-wrap ul.pagelist > li {
     width: 50px;
@@ -254,6 +267,9 @@
   }
   .page__catalog .material-slider .slick-arrow {
     top: 45%;
+  }
+  .page__catalog .material-slider .material-thumb {
+    width: 25%;
   }
   .page__catalog .material-slider .material-thumb .material-image {
     height: 263px;

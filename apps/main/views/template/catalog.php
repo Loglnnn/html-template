@@ -40,14 +40,14 @@
   </div>
   <div class="material-slider-wrapper row">
     <div class="c__inner container-fluid">
-      <div class="material-slider">
+      <div class="material-slider" data-role="material-slider">
         <?php for($i=0;$i<5;$i++) { ?>
         <div class="material-thumb">
           <a href="#">
             <div class="c__centered-image material-image">
               <img src="/frontend/catalog/testimage.jpg" />
             </div>
-            <div class="caption">Дерево<?php echo $i; ?></div>
+            <a href="#" class="btn caption">Дерево<?php echo $i; ?></a>
           </a>
         </div>
         <?php } ?>
@@ -56,7 +56,7 @@
   </div>
   <div class="row c__inner container-fluid">
     <div class="filter">
-      <div class="count-select">
+      <div class="count-select form-group">
         <select>
           <option>Фильтр 1</option>
           <option>Фильтр 2</option>

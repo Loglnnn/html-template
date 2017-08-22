@@ -28,16 +28,22 @@
       </div>
       <div class="inputs">
         <div class="dim_input row container-fluid">
-          <div class="input_container">
+          <div class="input_container from-group">
             <label for="width">Ширина</label>
             <div class="length-input">
               <input class="left" type="text" id="width" />
             </div>
+            <div class="help-block">
+              Заполните поле!
+            </div>
           </div>
-          <div class="input_container">
+          <div class="input_container from-group">
             <label for="height">Высота</label>
             <div class="length-input">
               <input class="right" type="text" id="height" />
+            </div>
+            <div class="help-block">
+              Заполните поле!
             </div>
           </div>
         </div>
@@ -112,7 +118,7 @@
             <div class="help-block">Help Block</div>
           </div>
           <div class="field half-768 half-fullwidth-1000">
-            <submit class="btn c__btn-block c__btn-filled">Сделать заказ</submit>
+            <button class="btn c__btn-block c__btn-filled">Сделать заказ</button>
           </div>
         </div>
       </div>

@@ -12,6 +12,14 @@
       .main-slider {
         height: 100%;
         
+        & > div {
+          display: none;
+          
+          &:first-child {
+            display: block;
+          }
+        }
+        
         .slick-list, .slick-track, .slick-slide {
           height: 100%;
         }
@@ -58,6 +66,8 @@
         height: 53px;
         margin-top: 10px;
         position: relative; 
+        vertical-align: initial;
+        font-size: 18px;
         
         &:hover {
           border-color: #00d6b5;
