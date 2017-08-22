@@ -68,10 +68,18 @@
   <div class="product-list-wrap row">
     <div class="c__inner container-fluid">
       <div class="product-list">
-        <?php for($i=0;$i<7;$i++) { ?>
+        <?php 
+          $imgs = array( 
+            "testimage.jpg",
+            "img1.png",
+            "img2.png",
+            "img3.png",
+          );
+          for($i=0;$i<7;$i++) { 
+        ?>
         <div class="product-card">
           <div class="img-wrap">
-            <img src="/frontend/catalog/testimage.jpg" />
+            <img src="/frontend/catalog/<?php echo $imgs[$i%4]; ?>" />
           </div>
           <div class="description">
             <h3 class="caption">Товар<?php echo $i; ?></h3>
