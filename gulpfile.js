@@ -14,6 +14,7 @@ gulp.Gulp.prototype._runTask = function(task) {
     this.__runTask(task);
 }
 
+const path = require('path')
 const chalk = require('chalk');
 const fs = require('fs');
 const merge = require('merge-deep');
@@ -50,12 +51,17 @@ gulp.task('lint-css', function lintCssTask() {
     // https://stackoverflow.com/questions/45740437/gulp-expect-file-runs-check-before-stylelint-lints-files-missing-file-error
     let missing, unexpected
     expected_files.forEach(function (item) {
+        const name = path.basename(path.dirname(item))
+        if (config.only && config.only !== name) return
+
         if (existing_files.indexOf(item) === -1) {
             missing = true
             console.log("Missing file " + item)
         }
     })
     existing_files.forEach(function (item) {
+        if (config.only) return
+
         if (expected_files.indexOf(item) === -1) {
             unexpected = true
             console.log("Unexpected file " + item)
@@ -67,9 +73,6 @@ gulp.task('lint-css', function lintCssTask() {
 
     const gulpStylelint = require('gulp-stylelint')
     const stylelintConfigBase = require('./stylelint.config.base')
-
-
-    const path = require('path')
 
     const postcss = require('gulp-postcss')
     const doiuseDisable = function(prop, value) {
@@ -102,7 +105,26 @@ gulp.task('lint-css', function lintCssTask() {
         if (config.parts[name]) {
             stylelintConfig = merge(stylelintConfigBase, config.parts[name].stylelint)
         } else {
-            stylelintConfig = stylelintConfigBase
+            if (name !== 'layout' && name !== 'component') {
+                stylelintConfig = merge(stylelintConfigBase, {
+                    plugins: [
+                        __dirname + "/stylelint/top-selector-match-pattern",
+                    ],
+                    rules: {
+                        "plugin/top-selector-match-pattern": {
+                            patterns: [
+                                {
+                                    type: 'class',
+                                    name: '.page__' + name,
+                                    pattern: 'page__' + name
+                                },
+                            ]
+                        },
+                    }
+                })
+            } else {
+                stylelintConfig = stylelintConfigBase
+            }
         }
 
         let stream = gulp.src(file)
@@ -129,67 +151,107 @@ gulp.task('lint-css', function lintCssTask() {
         // .pipe(expect({errorOnFailure: true}, expected_files))
 });
 
-gulp.task('lint-html', ['build-pages'], function() {
+
+gulp.task('lint-html', function (cb) {
+    const runSequence = require('run-sequence')
+
+    runSequence('build-pages', 'lint-html-real', cb)
+})
+
+gulp.task('lint-html-real', function() {
     const config = merge({
-        pages: local_config.global.pages
+        pages: local_config.global.pages,
+        grunt: true,
     }, local_config['lint-html'])
 
-    let entries = {}
+    let entries = {full: {}, nolayout: {}, layout: null}
+    let expected_files = {full: [], nolayout: [], layout: null}
+
     config.pages.forEach(function (page) {
-        entries[page] = 'html/' + page + '.html'
+        let full = 'html/full/' + page + '.html'
+        let nolayout = 'html/no-layout/' + page + '.html'
+
+        entries.full[page] = full
+        entries.nolayout[page] = nolayout
+
+        if (config.only && config.only !== page) return
+
+        expected_files.full.push(full)
+        expected_files.nolayout.push(nolayout)
     })
+    entries.layout = 'html/layout/layout.html'
+    if (!config.only) {
+        expected_files.layout = entries.layout
+    }
 
-    let expected_files = []
+    let existing_files = {full: [], nolayout: [], layout: null}
+    existing_files.full = require('glob').sync('html/full/*.html')
 
-    Object.keys(entries).forEach(function (key) {
-        if (config.only && config.only !== key) return
-
-        expected_files.push(entries[key])
-    })
-
-    let existing_files = require('glob').sync('html/*.html')
-
-    const path = require('path')
     const posthtml = require('gulp-posthtml');
     const Lint = require('./posthtml/plugins/lint/index.js');
     const MarkParent = require('./posthtml/plugins/mark-parent/index.js');
-    const plugins = [
-        MarkParent(),
-        Lint({
-            rules: [
-                __dirname + '/posthtml/plugins/lint/rules/top-level-tags-must-have-container.js',
-                __dirname + '/posthtml/plugins/lint/rules/top-level-tags-must-have-meaningful-class.js',
-            ]
-        }),
-    ];
 
     let streams
     let html_is_valid = true
 
-    existing_files.forEach(function (file) {
+    existing_files.full.forEach(function (file) {
         const name = path.basename(file, '.html')
 
         if (config.only && config.only !== name) return
 
-        const grunt = shell.exec('grunt lint-html:' + file, {silent:true});
+        if (config.grunt) {
+            const grunt = shell.exec('grunt lint-html:' + file, {silent:true});
 
-        if (grunt.code !== 0) {
-            html_is_valid = false
-            // убираем текущий файл из expected files - мы не будем направлять
-            // его в posthtml, так как он не валидный
-            expected_files = expected_files.filter(function (item) {
-                return item !== file
-            })
-            console.log(chalk.yellow("HTML is not valid in " + file))
-            console.log()
-            console.log(chalk.red(grunt.stdout))
+            if (grunt.code !== 0) {
+                html_is_valid = false
+                // убираем текущий файл из expected files - мы не будем направлять
+                // его в posthtml, так как он не валидный
+                expected_files = expected_files.filter(function (item) {
+                    return item !== file
+                })
+                console.log(chalk.yellow("HTML is not valid in " + file))
+                console.log()
+                console.log(chalk.red(grunt.stdout))
 
-            return
+                return
+            }
         }
 
         if (!streams) {
             streams = require('merge2')()
         }
+
+        const mandatory = config.lint.mandatory.concat(
+            [
+                {url: '/frontend/layout/layout.css', tag: 'link'},
+                {url: '/frontend/layout/layout.js', tag: 'script'},
+                {url: '/frontend/component/components.css', tag: 'link'},
+                {url: '/frontend/' + name + '/' + name + '.css', tag: 'link'},
+                {url: '/frontend/' + name + '/' + name + '.js', tag: 'script'},
+            ]
+        )
+
+        const allowed = mandatory.concat(config.lint.allowed)
+
+        const plugins = [
+            MarkParent(),
+            Lint({
+                file: file,
+                rules: [
+                    {
+                        path: __dirname + '/posthtml/plugins/lint/rules/top-level-tags-must-have-container.js',
+                    },
+                    {
+                        path: __dirname + '/posthtml/plugins/lint/rules/page-must-have-mandatory-libraries.js',
+                        config: mandatory
+                    },
+                    {
+                        path: __dirname + '/posthtml/plugins/lint/rules/page-allow-libraries.js',
+                        config: allowed
+                    },
+                ]
+            }),
+        ];
 
         let stream = gulp.src(file)
             .pipe(posthtml(plugins))
@@ -207,8 +269,117 @@ gulp.task('lint-html', ['build-pages'], function() {
         console.log("Invalid html files found")
     }
 
-    return streams
-        .pipe(expect({errorOnFailure: true}, expected_files))
+    let full_stream = streams
+        .pipe(expect({errorOnFailure: true}, expected_files.full))
+
+    let response = require('merge2')()
+
+    response.add(full_stream)
+
+
+
+
+
+    /*
+     * LAYOUT
+     */
+
+    let file = entries.layout
+
+    let plugins = [
+        Lint({
+            file: file,
+            rules: [
+                {
+                    path: __dirname + '/posthtml/plugins/lint/rules/img-allow-src.js',
+                    config: new RegExp('^/frontend/layout/[A-Za-z0-9-]+.(jpg|svg|png)$')
+                },
+                {
+                    path: __dirname + '/posthtml/plugins/lint/rules/top-level-tags-must-have-meaningful-class.js',
+                    config: {
+                        patterns: [
+                            {
+                                name: '.l__*',
+                                pattern: "l__[a-zA-Z0-9-]+",
+                            }
+                        ],
+                        level: 'body'
+                    },
+                },
+            ]
+        }),
+    ]
+
+    let layout_stream = gulp.src(file)
+        .pipe(expect({errorOnFailure: true}, file))
+        .pipe(posthtml(plugins))
+
+    response.add(layout_stream)
+
+
+
+
+
+    /*
+    * NO LAYOUT
+    */
+
+    streams = null
+    existing_files.nolayout = require('glob').sync('html/no-layout/*.html')
+
+    existing_files.nolayout.forEach(function (file) {
+        const name = path.basename(file, '.html')
+
+        if (config.only && config.only !== name) return
+
+        if (!streams) {
+            streams = require('merge2')()
+        }
+
+        const plugins = [
+            Lint({
+                file: file,
+                rules: [
+                    {
+                        path: __dirname + '/posthtml/plugins/lint/rules/img-allow-src.js',
+                        config: new RegExp('^/frontend/' + name + '/[A-Za-z0-9-]+.(jpg|svg|png)$')
+                    },
+                    {
+                        path: __dirname + '/posthtml/plugins/lint/rules/top-level-tags-must-have-meaningful-class.js',
+                        config: {
+                            patterns: [
+                                {
+                                    name: '.page__*',
+                                    pattern: "page__" + name,
+                                }
+                            ],
+                            level: null
+                        },
+                    },
+                ]
+            }),
+        ];
+
+        let stream = gulp.src(file)
+            .pipe(posthtml(plugins))
+        ;
+
+        streams.add(stream)
+    })
+
+    if (!streams) {
+        // https://github.com/gulpjs/gulp/issues/2010
+        throw new Error("No valid files found")
+    }
+
+
+    let nolayout_stream = streams
+        .pipe(expect({errorOnFailure: true}, expected_files.nolayout))
+
+    response.add(nolayout_stream)
+
+
+    return response
 })
 
 /**
@@ -245,7 +416,7 @@ gulp.task('lint-git', function () {
     })
 })
 
-gulp.task('build-pages', function () {
+gulp.task('build-pages', function (cb) {
     const config = merge({
         domain: local_config.global.domain,
         scheme: 'http',
@@ -257,14 +428,21 @@ gulp.task('build-pages', function () {
     let files = []
     config.pages.forEach(function (page) {
         files.push({
-            file: page + '.html',
+            file: 'full/' + page + '.html',
             url: config.scheme + "://" + config.domain + '/template/' + page + '.html'
+        })
+        files.push({
+            file: 'no-layout/' + page + '.html',
+            url: config.scheme + "://" + config.domain + '/template/' + page + '.html?layout=false'
+        })
+        files.push({
+            file: 'layout/layout.html',
+            url: config.scheme + "://" + config.domain + '/template/layout/'
         })
     })
 
     return download(files)
-        .pipe(gulp.dest("html/"));
-
+        .pipe(gulp.dest("html/"))
 })
 
 gulp.task('test', ['lint-css', 'lint-html', 'lint-git'])
