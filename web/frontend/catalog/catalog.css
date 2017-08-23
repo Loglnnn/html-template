@@ -111,7 +111,7 @@
 .page__catalog .filter .count-select {
   /* специально для IE11 (убирает стрелку у select) */
 }
-.page__catalog .filter .count-select select {
+.page__catalog .filter .count-select .filter-select {
   width: 100%;
   position: relative;
   height: 50px;
@@ -124,7 +124,7 @@
   background-size: 11px 5px;
   background-position: 95% 50%;
 }
-.page__catalog .filter .count-select select::-ms-expand {
+.page__catalog .filter .count-select .filter-select::-ms-expand {
   display: none;
 }
 .page__catalog .product-list-wrap {

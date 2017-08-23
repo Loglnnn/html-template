@@ -8,7 +8,10 @@
     <div class="inner container-fluid">
       <img src="/frontend/layout/logo.png" class="logo" />
       <div class="search">
-        <input type="text" placeholder="Найти" />
+        <div class="form-group c__custom-form-group">
+          <input class="form-control" type="text" placeholder="Найти" />
+          <div class="help-block"></div>
+        </div>
       </div>
       <div class="contacts">
         <div class="city">Санкт-Петербург</div>

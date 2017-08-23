@@ -2,12 +2,8 @@
   <div class="main-banner-wrap row">
     <div class="c__banner main-banner">
       <div class="main-slider" data-role="main-slider">
-        <div class="c__centered-image overlayed">
-          <img src="/frontend/main/banner.jpg" />
-        </div>
-        <div class="c__centered-image overlayed">
-          <img src="/frontend/main/your-photo.jpg" />
-        </div>
+        <div class="main-banner-image overlayed" style="background-image: url('/frontend/main/banner.jpg');"></div>
+        <div class="main-banner-image overlayed" style="background-image: url('/frontend/main/your-photo.jpg');"></div>
       </div>
       <h1>Разбудите <br class="c__hide-768" /> ваши стены!</h1>
       <div class="btn-container">

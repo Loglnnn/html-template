@@ -65,7 +65,6 @@
         .input_container {
           float: left;
           width: 50%;
-          margin-bottom: 0px;
           
           label {
             display: block;
@@ -85,7 +84,7 @@
               color: #bbb;
               position: absolute;
               right: 20px;
-              top: 0px;
+              bottom: 1px;
               font-size: 16px;
             }
             
@@ -96,6 +95,7 @@
               height: 50px;
               line-height: 50px;
               font-size: 18px;
+              color: inherit;
               
               &:focus {
                 outline: none;
@@ -110,15 +110,6 @@
                 border-radius: 0 5px 5px 0;
               }
             }
-          }
-          
-          .help-block {
-            display: none;
-            text-align: center;
-          }
-          
-          &.has-error .help-block {
-            display: block;
           }
         }
       }
@@ -162,13 +153,13 @@
                 }
               }
               
-              div.name {
+              .name {
                 text-align: center;
                 margin-top: 7px;
                 color: #666;
               }
               
-              div.sale {
+              .sale {
                 position: absolute;
                 top: 7px;
                 left: 7px;
@@ -233,7 +224,6 @@
         
         .field {
           margin-top: 11px;
-          margin-bottom: 0;
           width: 100%;
 
           label {
@@ -261,6 +251,7 @@
             line-height: 50px;
             font-size: 18px;
             padding: 0px 10px;
+            color: inherit;
           }
           
           input[type="checkbox"], select {
@@ -293,11 +284,14 @@
           }
           
           input[type="checkbox"] {
+            display: inline-block;
+            color: inherit;
+            font-size: inherit;
             width: 30px;
             height: 30px;
             background-color: #00ad92;
             border-radius: 5px;
-            vertical-align: top;
+            vertical-align: middle;
             margin: 0;
             margin-right: 5px;
             border: none;
@@ -316,14 +310,6 @@
           input:focus, select:focus {
             outline: none;
             border-color: #00ad92;
-          }
-          
-          .help-block {
-            display: none;
-          }
-          
-          &.has-error .help-block {
-            display: block;
           }
         }
       }

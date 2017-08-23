@@ -28,22 +28,18 @@
       </div>
       <div class="inputs">
         <div class="dim_input row container-fluid">
-          <div class="input_container from-group">
-            <label for="width">Ширина</label>
-            <div class="length-input">
-              <input class="left" type="text" id="width" />
-            </div>
-            <div class="help-block">
-              Заполните поле!
+          <div class="input_container">
+            <div class="length-input form-group c__custom-form-group">
+              <label class="control-label" for="width">Ширина</label>
+              <input class="left form-control" type="text" id="width" />
+              <div class="help-block"></div>
             </div>
           </div>
-          <div class="input_container from-group">
-            <label for="height">Высота</label>
-            <div class="length-input">
-              <input class="right" type="text" id="height" />
-            </div>
-            <div class="help-block">
-              Заполните поле!
+          <div class="input_container">
+            <div class="length-input form-group c__custom-form-group"> 
+              <label class="control-label" for="height">Высота</label>
+              <input class="right form-control" type="text" id="height" />
+              <div class="help-block"></div>
             </div>
           </div>
         </div>
@@ -79,43 +75,44 @@
         <h1>Оформление заказа</h1>
         <div class="call">Перезвоним Вам<br class="c__hide-480" /> в течение 15 минут</div>
         <div class="fields row container-fluid">
-          <div class="field form-group">
+          <div class="field form-group c__custom-form-group">
             <label class="control-label" for="name">Имя и Фамилия</label>
             <input class="form-control" type="text" id="name" />
-            <div class="help-block">Help Block</div>
+            <div class="help-block"></div>
           </div>
-          <div class="field half-768 form-group ">
-            <label for="phone">Телефон</label>
-            <input type="text" id="phone" />
-            <div class="help-block">Help Block</div>
+          <div class="field half-768 form-group c__custom-form-group">
+            <label class="control-label"  for="phone">Телефон</label>
+            <input class="form-control"  type="text" id="phone" />
+            <div class="help-block"></div>
           </div>
-          <div class="field half-768 form-group ">
-            <label for="email">Электронная почта</label>
-            <input type="text" id="email" />
-            <div class="help-block">Help Block</div>
+          <div class="field half-768 form-group c__custom-form-group">
+            <label class="control-label"  for="email">Электронная почта</label>
+            <input class="form-control"  type="text" id="email" />
+            <div class="help-block"></div>
           </div>
-          <div class="field half-768 form-group ">
-            <label for="delivery-method">Способ доставки</label>
-            <select id="delivery-method">
+          <div class="field half-768 form-group c__custom-form-group">
+            <label class="control-label"  for="delivery-method">Способ доставки</label>
+            <select class="form-control"  id="delivery-method">
               <option id="option11">option11</option>
               <option id="option12">option12</option>
               <option id="option13">option13</option>
             </select>
-            <div class="help-block">Help Block</div>
+            <div class="help-block"></div>
           </div>
-          <div class="field half-768 form-group ">
-            <label for="delivery-place">Пункт выдачи</label>
-            <select id="delivery-place">
+          <div class="field half-768 form-group c__custom-form-group">
+            <label class="control-label" for="delivery-place">Пункт выдачи</label>
+            <select class="form-control" id="delivery-place">
               <option id="option21">option21</option>
               <option id="option22">option22</option>
               <option id="option23">option23</option>
             </select>
-            <div class="help-block">Help Block</div>
+            <div class="help-block"></div>
           </div>
-          <div class="field form-group half-768 half-fullwidth-1000">
-            <label class="checkbox" for="is-delivery-place"><input type="checkbox" id="is-delivery-place" />
+          <div class="field form-group half-768 half-fullwidth-1000 c__custom-form-group">
+            <label class="control-label checkbox" for="is-delivery-place">
+            <input class="form-control"  type="checkbox" id="is-delivery-place" />
             Пункт выдачи</label>
-            <div class="help-block">Help Block</div>
+            <div class="help-block"></div>
           </div>
           <div class="field half-768 half-fullwidth-1000">
             <button class="btn c__btn-block c__btn-filled">Сделать заказ</button>

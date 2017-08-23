@@ -41,8 +41,7 @@
   right: -150%;
   margin: auto;
   min-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
+  max-height: 150%;
 }
 .c__banner {
   position: relative;
@@ -152,6 +151,15 @@
 .c__vertical-centered-text > span {
   display: inline-block;
   vertical-align: middle;
+}
+.c__custom-form-group {
+  margin-bottom: 0;
+}
+.c__custom-form-group .help-block {
+  display: none;
+}
+.c__custom-form-group.has-error .help-block {
+  display: block;
 }
 @media screen and (max-width: 479px) {
   .c__hide-320-480 {

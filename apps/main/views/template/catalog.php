@@ -56,12 +56,13 @@
   </div>
   <div class="row c__inner container-fluid">
     <div class="filter">
-      <div class="count-select form-group">
-        <select>
+      <div class="count-select form-group c__custom-form-group">
+        <select class="form-control filter-select">
           <option>Фильтр 1</option>
           <option>Фильтр 2</option>
           <option>Фильтр 3</option>
         </select>
+        <div class="help-block"></div>
       </div>
     </div>
   </div>
