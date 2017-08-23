@@ -179,6 +179,8 @@
   padding-bottom: 40px;
   line-height: 1.2;
   background-color: #f7f7f7;
+  float: none;
+  width: auto;
 }
 .page__item .second-row .form .fields .field {
   margin-top: 11px;

@@ -74,7 +74,7 @@
       <div class="form">
         <h1>Оформление заказа</h1>
         <div class="call">Перезвоним Вам<br class="c__hide-480" /> в течение 15 минут</div>
-        <div class="fields row container-fluid">
+        <div class="fields row col-xs-12">
           <div class="field form-group c__custom-form-group">
             <label class="control-label" for="name">Имя и Фамилия</label>
             <input class="form-control" type="text" id="name" />
