@@ -5,7 +5,7 @@
 <!-- шапка, меню -->
 <div class="l__header container-fluid">
   <div class="subheader row">
-    <div class="inner container-fluid">
+    <div class="c__inner col-xs-12">
       <img src="/frontend/layout/logo.png" class="logo" />
       <div class="search">
         <div class="form-group c__custom-form-group">
@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="navbar row">
-    <div class="inner container-fluid">
+    <div class="c__inner col-xs-12">
       <div class="menu-wrap" data-role="menu-root">
         <a class="mobile-header" data-role="menu-toggle">Меню</a>
         <ul class="menu" data-role="menu-list">
@@ -48,10 +48,10 @@
 <!-- футер -->
 <div class="l__footer container-fluid">
   <div class="catalog-wrap row">
-    <div class="catalog container-fluid">
+    <div class="c__inner catalog col-xs-12">
       <h1>Каталог<br class="c__hide-480" /> фотообоев</h1>
       <ul class="category-list row">
-        <li class="container-fluid" data-role="menu-root">
+        <li class="col-xs-12" data-role="menu-root">
           <h2 data-role="menu-toggle">Европа</h2>
           <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Итем 1</a></li>
@@ -59,7 +59,7 @@
             <li><a href="#">Итем 3</a></li>
           </ul>
         </li>
-        <li class="container-fluid" data-role="menu-root">
+        <li class="col-xs-12" data-role="menu-root">
           <h2 data-role="menu-toggle">Природа</h2>
           <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Водопады</a></li>
@@ -67,7 +67,7 @@
             <li><a href="#">Лес</a></li>
           </ul>
         </li>
-        <li class="container-fluid" data-role="menu-root">
+        <li class="col-xs-12" data-role="menu-root">
           <h2 data-role="menu-toggle">Цветы и растения</h2>
           <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Макросъемка</a></li>
@@ -84,7 +84,7 @@
             <li><a href="#">Натюрморт</a></li>
           </ul>
         </li>
-        <li class="container-fluid" data-role="menu-root">
+        <li class="col-xs-12" data-role="menu-root">
           <h2 data-role="menu-toggle">Искусство</h2>
           <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Абстракция</a></li>
@@ -97,7 +97,7 @@
             <li><a href="#">Обои современные</a></li>
           </ul>
         </li>
-        <li class="container-fluid" data-role="menu-root">
+        <li class="col-xs-12" data-role="menu-root">
           <h2 data-role="menu-toggle">Искусство</h2>
           <ul class="subcategory-list" data-role="menu-list">
             <li><a href="#">Абстракция</a></li>
@@ -115,7 +115,7 @@
     </div>
   </div> 
   <div class="footer-row row">
-    <div class="inner container-fluid">
+    <div class="c__inner col-xs-12">
       <div class="logo-socials-wrap">
         <img src="/frontend/layout/logo.png" class="logo" />
         <div class="socials-wrap">
@@ -134,7 +134,7 @@
     </div>
   </div>
   <div class="subfooter row">
-    <div class="inner container-fluid">
+    <div class="c__inner col-xs-12">
       <div class="copyright">© stenagrafika.ru, 2017</div>
       <div class="links">
         <a href="#">Портфолио</a>

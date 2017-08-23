@@ -4,7 +4,7 @@
 ?>
 <div class="page__item container-fluid">
   <div class="c__breadcrumbs row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <ul class="breadcrumbs">
         <li><a href="#">Главная</a></li>
         <li><a href="#">Каталог</a></li>
@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="first-row row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <div class="thumb">
         <div class="preview row">
           <img src="/frontend/item/testimage.jpg" />
@@ -27,7 +27,7 @@
         <div class="articul">F015-41</div> 
       </div>
       <div class="inputs">
-        <div class="dim_input row container-fluid">
+        <div class="dim_input row col-xs-12">
           <div class="input_container">
             <div class="length-input form-group c__custom-form-group">
               <label class="control-label" for="width">Ширина</label>
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="material-list row">
-          <ul>
+          <ul class="col-xs-12">
             <?php for($i=0;$i<6;$i++) { ?>
             <li <?php if($i==2) echo 'class="selected"' ?>>
               <div class="material-wrap">
@@ -70,7 +70,7 @@
     </div>
   </div>
   <div class="second-row row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <div class="form">
         <h1>Оформление заказа</h1>
         <div class="call">Перезвоним Вам<br class="c__hide-480" /> в течение 15 минут</div>
@@ -150,7 +150,7 @@
   <div class="description row">
     <div data-role="tabs">
       <div class="tab-head">
-        <div class="c__inner container-fluid">
+        <div class="c__inner col-xs-12">
           <ul class="row" data-role="tab-headers">
             <li data-tab-id="tab1" data-role="tab-header" class="active">Описание</li>
             <li data-tab-id="tab2" data-role="tab-header">Характеристики</li>
@@ -159,7 +159,7 @@
         </div>
       </div>
       <div class="tab-container" data-role="tab-container">
-        <div class="c__inner container-fluid">
+        <div class="c__inner col-xs-12">
           <div data-tab-id="tab1" class="tab active">
             <h3 class="caption">Материалы</h3>
             <p>

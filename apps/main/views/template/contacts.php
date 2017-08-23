@@ -5,7 +5,7 @@
 ?>
 <div class="page__contacts container-fluid">
   <div class="c__breadcrumbs row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <ul class="breadcrumbs">
         <li><a href="#">Главная</a></li>
         <li><h1>Контакты</h1></li>
@@ -14,7 +14,7 @@
   </div>
   
   <div class="map-header row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
     <ul class="headers">
       <li class="active"><a href="#">Москва</a></li>
       <li><a href="#">Санкт-Петербург</a></li>
@@ -26,7 +26,7 @@
     
   </div>
   <div class="socials row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <h1 class="caption">Присоединяйтесь к нам</h1>
       <div class="blocks-container">
         <div class="social-block">
