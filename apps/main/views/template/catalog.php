@@ -1,6 +1,6 @@
 <div class="page__catalog container-fluid">
   <div class="c__breadcrumbs row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <ul class="breadcrumbs">
         <li><a href="#">Главная</a></li>
         <li><a href="#">Каталог</a></li>
@@ -9,13 +9,13 @@
     </div>
   </div>
   <div class="thumb-wrap row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <div class="thumb">
         <div class="preview row">
           <img src="/frontend/catalog/testimage.jpg" />
         </div>
         <div class="announce row">
-          <div class="c__inner container-fluid">
+          <div class="c__inner col-xs-12">
             <h2 class="caption">Белый кирпич</h2>
             <p>
               Наши настенные фрески из Текстуры - все о выражении вашего видения. Вы ищете городское чувство? Попробуйте одну из наших кирпичных настенных росписей. Стиль страны? Пойдите с одной из наших деревянных настенных росписей. Изменение внешнего вида ваших стен никогда не было так легко с настенными росписями и фото-росписями Eazywallz.
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="announce2 c__hide-320-768 row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <p>
         Просмотрите нашу категорию «Текстуры настенные», чтобы воссоздать естественные текстуры с невероятным реализмом. Пойдите с нашей красной кирпичной стеной, чтобы добавить городской и модный стиль «лофта» в вашу гостиную; Выберите «Улицы из белого дерева», чтобы дать вашей спальне атмосферу французской страны; Или пойдите зеленым с Настенной росписью стены Бусины Грина, которая принесет освежающий прикосновение к Вашему домашнему декору.
       </p>
@@ -39,7 +39,7 @@
     </div>
   </div>
   <div class="material-slider-wrapper row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <div class="material-slider" data-role="material-slider">
         <?php for($i=0;$i<5;$i++) { ?>
         <div class="material-thumb">
@@ -54,7 +54,7 @@
       </div>
     </div>
   </div>
-  <div class="row c__inner container-fluid">
+  <div class="row c__inner col-xs-12">
     <div class="filter">
       <div class="count-select form-group c__custom-form-group">
         <select class="form-control filter-select">
@@ -67,7 +67,7 @@
     </div>
   </div>
   <div class="product-list-wrap row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <div class="product-list">
         <?php 
           $imgs = array( 
@@ -96,7 +96,7 @@
     </div>
   </div>
   <div class="pagination row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <div class="pagelist-wrap">
         <ul class="pagelist">
           <li class="active">1</li>
@@ -115,7 +115,7 @@
   </div>
   
   <div class="c__seotext row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <div class="columns">
         <h1>Фотообои в Москве <br class="c__hide-480" /> и Московской области</h1>
         <p>

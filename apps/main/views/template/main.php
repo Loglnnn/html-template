@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="buttons container-fluid">
+    <div class="buttons col-xs-12">
       <a href="#" class="btn home"><div class="c__vertical-centered-text"><span>Для дома</span></div></a>
       <a href="#" class="btn book"><div class="c__vertical-centered-text"><span>Для детских учреждений</span></div></a>
       <a href="#" class="btn business"><div class="c__vertical-centered-text"><span>Для бизнеса</span></div></a>
@@ -58,7 +58,7 @@
     </div>
   </div>
   <div class="pluses-wrapper row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <ul class="pluses">
         <li>
           <div class="wrapper">
@@ -111,7 +111,7 @@
   </div>
   
   <div class="c__seotext row">
-    <div class="c__inner container-fluid">
+    <div class="c__inner col-xs-12">
       <h1>Фотообои в Москве <br class="c__hide-480" /> и Московской области</h1>
       <p>
         У каждого периодически встает вопрос необходимости ремонта. Иногда его требует поизносившаяся побелка и выгоревшие обои, а иногда и банальное желание сделать свою жизнь в квартире немного ярче.

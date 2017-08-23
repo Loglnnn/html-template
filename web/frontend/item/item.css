@@ -47,6 +47,8 @@
   padding-bottom: 30px;
   background-color: #f7f7f7;
   overflow: hidden;
+  float: none;
+  width: auto;
 }
 .page__item .first-row .inputs .dim_input .input_container {
   float: left;

@@ -621,14 +621,6 @@ body a:active {
   }
 }
 @media screen and (min-width: 1280px) {
-  .l__header .subheader .inner,
-  .l__header .navbar .inner,
-  .l__footer .catalog-wrap .catalog,
-  .l__footer .subfooter .inner,
-  .l__footer .footer-row .inner {
-    width: 1280px;
-    margin: auto;
-  }
   .l__footer .catalog {
     padding-top: 78px;
     padding-bottom: 60px;
