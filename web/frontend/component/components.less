@@ -26,7 +26,7 @@
       h1 {
         font-size: 28px;
         font-weight: lighter;
-        color: #000;
+        color: #333;
         margin: 0;
       }
     }
@@ -241,7 +241,7 @@
 @media screen and (min-width:768px) {
   .c__breadcrumbs { 
     ul.breadcrumbs {
-      & > li {
+      & > li h1 {
         font-size: 36px;
       }
     }
@@ -254,6 +254,14 @@
 }
 
 @media screen and (min-width:1000px) {
+  .c__breadcrumbs { 
+    ul.breadcrumbs {
+      & > li h1 {
+        font-size: 42px;
+      }
+    }
+  }
+
   .c__seotext {    
     .columns {
       column-count: 2;

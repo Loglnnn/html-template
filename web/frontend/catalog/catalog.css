@@ -287,14 +287,14 @@
   .page__catalog .pagination .pagelist-wrap {
     text-align: left;
     float: left;
-    width: 70%;
+    width: 60%;
   }
   .page__catalog .pagination .pagelist-wrap ul.pagelist {
     margin: 0;
   }
   .page__catalog .pagination .btn-wrapper {
     float: right;
-    width: 30%;
+    width: 40%;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -311,6 +311,15 @@
   }
   .page__catalog .product-list-wrap .product-list {
     column-count: 4;
+  }
+  .page__catalog .pagination {
+    overflow: hidden;
+  }
+  .page__catalog .pagination .pagelist-wrap {
+    width: 70%;
+  }
+  .page__catalog .pagination .btn-wrapper {
+    width: 30%;
   }
 }
 @media screen and (min-width: 1280px) {

@@ -41,7 +41,7 @@
   <div class="material-slider-wrapper row">
     <div class="c__inner col-xs-12">
       <div class="material-slider" data-role="material-slider">
-        <?php for($i=0;$i<5;$i++) { ?>
+        <?php for($i=0;$i<10;$i++) { ?>
         <div class="material-thumb">
           <a href="#">
             <div class="c__centered-image material-image">
