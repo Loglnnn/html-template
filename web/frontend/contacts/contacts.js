@@ -10,6 +10,7 @@ $(document).ready(function() {
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(59.901567, 30.300273),
         map: map,
+        icon: '/frontend/component/google-styled-map/map-marker.svg',
         title: 'Stenagrafika.ru'
     });
 
