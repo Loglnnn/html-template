@@ -1,6 +1,5 @@
 <?php
-  //google maps, пришлось править AutoAssets для этого
-  $assets->addJs('https://maps.google.com/maps/api/js?sensor=false');
+  $assets->addJs('https://maps.google.com/maps/api/js?key=AIzaSyDXmzA8nErvKaIWacap7z9T2D9VzdfgWyA&sensor=false');
   $assets->addJs('https://vk.com/js/api/openapi.js');
 ?>
 <div class="page__contacts container-fluid">

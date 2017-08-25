@@ -1,6 +1,5 @@
 <?php
-  //см. contacts.php
-  $assets->addJs('https://maps.google.com/maps/api/js?sensor=false');
+  $assets->addJs('https://maps.google.com/maps/api/js?key=AIzaSyDXmzA8nErvKaIWacap7z9T2D9VzdfgWyA&sensor=false');
 ?>
 <div class="page__item container-fluid">
   <div class="c__breadcrumbs row">
