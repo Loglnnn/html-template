@@ -22,6 +22,8 @@ body a:active {
 .l__header .subheader .logo {
   display: block;
   margin: 13px auto 20px;
+  width: 156px;
+  height: 30px;
 }
 .l__header .subheader .search {
   position: relative;
@@ -354,6 +356,8 @@ body a:active {
 .l__footer .subfooter .payment-variants {
   display: block;
   margin: 16px auto 0px;
+  width: 130px;
+  height: 19px;
 }
 @media screen and (min-width: 480px) {
   .l__header .subheader {
@@ -545,7 +549,7 @@ body a:active {
   .l__header .navbar .menu-wrap ul.menu > li:hover .submenu-header:after {
     transform: rotate(180deg);
   }
-  .l__header .navbar .menu-wrap ul.menu > li.main:before {
+  .l__header .navbar .menu-wrap ul.menu > li.main > a:before {
     content: "";
     background: url(menu.png) no-repeat;
     width: 19px;

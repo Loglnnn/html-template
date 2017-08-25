@@ -1,6 +1,7 @@
 "use strict";
-
+var slider;
 $(document).ready(function () {
+  slider =
   $("*[data-role='material-slider']").slick(
   {
     slidesToShow: 2,
@@ -25,5 +26,12 @@ $(document).ready(function () {
       },
     ]
   }
-  );
+  )[0];
+  
+  var slickTimerId = setInterval(function () {
+    if(Math.random() > 0.5)
+      slider.slick.slickNext();
+    else
+      slider.slick.slickPrev();
+  }, 5000)
 });
