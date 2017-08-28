@@ -22,7 +22,7 @@
   <div class="banners-row row">
     <div class="banner-wrap">
       <div class="c__banner second-banner">
-        <div class="c__centered-image">
+        <div class="img-wrap">
           <img src="/frontend/main/your-photo.jpg" />
         </div>
         <h1>Фотообои <br />с вашим фото!</h1>
@@ -40,7 +40,7 @@
     </div>
     <div class="banner-wrap">
       <div class="c__banner second-banner">
-        <div class="c__centered-image">
+        <div class="img-wrap">
           <img src="/frontend/main/collection.jpg" />
         </div>
         <h1>Коллекция <br />30 самых популярных<br />изображений</h1>

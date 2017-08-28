@@ -125,8 +125,16 @@
       }
  
       .second-banner {
-        height: 314px;
+        //height: 314px;
+        padding-bottom: 98%;
         overflow: hidden;
+        
+        .img-wrap {
+          position: absolute;
+          & > img {
+            width: 100%;
+          }
+        }
         
         h1 {
           font-size: 28px;

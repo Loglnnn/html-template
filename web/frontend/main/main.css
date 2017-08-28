@@ -110,8 +110,14 @@
   margin-top: 0;
 }
 .page__main .banners-row .banner-wrap .second-banner {
-  height: 314px;
+  padding-bottom: 98%;
   overflow: hidden;
+}
+.page__main .banners-row .banner-wrap .second-banner .img-wrap {
+  position: absolute;
+}
+.page__main .banners-row .banner-wrap .second-banner .img-wrap > img {
+  width: 100%;
 }
 .page__main .banners-row .banner-wrap .second-banner h1 {
   font-size: 28px;
