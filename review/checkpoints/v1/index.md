@@ -71,3 +71,7 @@
    * [x] карта google snazzymaps ultra light с меткой
    * [x] виджеты vk, facebook
  * [x] без js
+
+## Прочее
+
+ * [!] IE11 - [скролл наезжает на страницу](_other/1.png)
