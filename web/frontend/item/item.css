@@ -378,6 +378,20 @@
   font-weight: lighter;
   line-height: 1.5;
 }
+.page__item .description .tab-container .tab ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.page__item .description .tab-container .tab ul li {
+  line-height: 2;
+}
+.page__item .description .tab-container .tab ul li:before {
+  content: '—';
+  margin-right: 10px;
+}
 @media screen and (min-width: 480px) {
   .page__item h1 {
     font-size: 32px;

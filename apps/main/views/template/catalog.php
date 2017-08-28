@@ -54,15 +54,17 @@
       </div>
     </div>
   </div>
-  <div class="row c__inner col-xs-12">
-    <div class="filter">
-      <div class="count-select form-group c__custom-form-group">
-        <select class="form-control filter-select">
-          <option>Фильтр 1</option>
-          <option>Фильтр 2</option>
-          <option>Фильтр 3</option>
-        </select>
-        <div class="help-block"></div>
+  <div class="filters-block row">
+    <div class="col-xs-12 c__inner">
+      <div class="filter">
+        <div class="count-select form-group c__custom-form-group">
+          <select class="form-control filter-select">
+            <option>Фильтр 1</option>
+            <option>Фильтр 2</option>
+            <option>Фильтр 3</option>
+          </select>
+          <div class="help-block"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -79,17 +81,15 @@
           for($i=0;$i<7;$i++) { 
         ?>
         <div class="product-card">
-          <div class="img-wrap">
-            <img src="/frontend/catalog/<?php echo $imgs[$i%4]; ?>" />
-          </div>
-          <div class="description">
-            <h3 class="caption">Товар<?php echo $i; ?></h3>
-            <div class="articul"><?php echo $i; ?></div>
-            <div class="price">от <?php echo $i; ?> руб.</div>
-            <div class="btn-wrapper">
-              <a class="btn c__btn-filled btn-more">Подробнее</a>
+          <a href="#">
+            <div class="img-wrap">
+              <img src="/frontend/catalog/<?php echo $imgs[$i%4]; ?>" />
             </div>
-          </div>
+            <div class="description">
+              <h3 class="caption">GreenBerry дорога к замку<?php echo $i; ?></h3>
+              <div class="articul">F015-4<?php echo $i; ?></div>
+            </div>
+          </a>
         </div>
         <?php } ?>
       </div>

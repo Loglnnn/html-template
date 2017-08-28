@@ -80,9 +80,11 @@
   background-color: #00d6b5;
   color: white;
 }
-.c__btn-filled:active {
+.c__btn-filled:active,
+.c__btn-filled:focus {
   background-color: #006d5c;
   color: white;
+  outline: none;
 }
 .c__btn-default-line-height {
   line-height: initial;

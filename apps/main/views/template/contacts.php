@@ -14,11 +14,13 @@
   
   <div class="map-header row">
     <div class="c__inner col-xs-12">
-    <ul class="headers">
-      <li class="active"><a href="#">Москва</a></li>
-      <li><a href="#">Санкт-Петербург</a></li>
-      <li><a href="#">Нижний-Новгород</a></li>
-    </ul>
+    <div data-role="tabs">
+      <ul class="headers" data-role="tab-headers">
+        <li class="active" data-role="tab-header">Москва</li>
+        <li data-role="tab-header">Санкт-Петербург</li>
+        <li data-role="tab-header">Нижний-Новгород</li>
+      </ul>
+    </div>
     </div>
   </div>
   <div class="map row" data-role="map">

@@ -13,7 +13,7 @@
  */
 
 $(document).ready(function() {
-  $("*[data-role='main-slider'").slick(
+  $("*[data-role='main-slider']").slick(
   {
     arrows: false,
     accessibility: false,

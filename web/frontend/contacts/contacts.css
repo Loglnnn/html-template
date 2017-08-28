@@ -23,14 +23,10 @@
   text-transform: uppercase;
   padding: 0 15px 0 10px;
   cursor: pointer;
-}
-.page__contacts .map-header ul.headers > li > a {
   color: #00ad92;
 }
 .page__contacts .map-header ul.headers > li.active {
   border-color: #00ad92;
-}
-.page__contacts .map-header ul.headers > li.active > a {
   color: black;
 }
 .page__contacts .map {
