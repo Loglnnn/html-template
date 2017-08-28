@@ -68,6 +68,27 @@ class AutoAssets extends Object
         $this->_js[$this->mode][] = trim($js, '/');
     }
 
+    protected function getLocalCss($path, $required = true) {
+        /** @var ProjectConfig $projectConfig */
+        $projectConfig = Yii::$app->projectConfig;
+        if ($projectConfig->config['global']['assets']['css'] === 'preprocessed') {
+            $dir = dirname($path);
+            $name = basename($path, '.css');
+            $result = $dir . '/' . $name . '.p.css';
+        } else {
+            $result = $path;
+        }
+        if (!file_exists(Yii::getAlias('@webroot') . '/' . $result)) {
+            if ($required) {
+                throw new \Exception("Css file " . $result . " not found");
+            } else {
+                return null;
+            }
+        }
+
+        return $result;
+    }
+
     public function getCss() {
         $css = $this->_css;
 
@@ -86,10 +107,10 @@ class AutoAssets extends Object
         }
 
         // Компоненты
-        $result[] = 'frontend/component/components.css';
+        $result[] = $this->getLocalCss('frontend/component/components.css');
 
         // Стили layout
-        $result[] = 'frontend/layout/layout.css';
+        $result[] = $this->getLocalCss('frontend/layout/layout.css');
 
         // Библиотеки страницы
         if (isset($css[static::MODE_PAGE])) {
@@ -97,8 +118,7 @@ class AutoAssets extends Object
         }
 
         // Стили страницы
-        $default = "frontend/{$this->page}/{$this->page}.css";
-        if (file_exists(Yii::getAlias('@webroot') . '/' . $default)) {
+        if ($default = $this->getLocalCss("frontend/{$this->page}/{$this->page}.css", false)) {
             $result[] = $default;
         }
 
