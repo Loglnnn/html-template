@@ -16,9 +16,9 @@
     <div class="c__inner col-xs-12">
     <div data-role="tabs">
       <ul class="headers" data-role="tab-headers">
-        <li class="active" data-role="tab-header">Москва</li>
-        <li data-role="tab-header">Санкт-Петербург</li>
-        <li data-role="tab-header">Нижний-Новгород</li>
+        <li data-role="tab-header" data-city="Москва" data-long="37.61556" data-lat="55.75222">Москва</li>
+        <li class="active" data-role="tab-header" data-city="Санкт-Петербург" data-long="30.26417" data-lat="59.89444">Санкт-Петербург</li>
+        <li data-role="tab-header" data-city="Нижний-Новгород" data-long="44.00205" data-lat="56.32867">Нижний-Новгород</li>
       </ul>
     </div>
     </div>
