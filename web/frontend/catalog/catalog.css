@@ -40,6 +40,9 @@
   height: 199px;
   overflow: hidden;
 }
+.page__catalog .material-slider.slick-initialized {
+  overflow: initial;
+}
 .page__catalog .material-slider .slick-arrow {
   display: block;
   background: url("arrow-down-blue.svg") no-repeat;
