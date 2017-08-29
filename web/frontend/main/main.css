@@ -243,9 +243,6 @@
   .page__main .main-banner-wrap .buttons {
     padding-bottom: 40px;
   }
-  .page__main .banners-row .banner-wrap .second-banner {
-    height: 471px;
-  }
   .page__main .banners-row .banner-wrap .second-banner h1 {
     font-size: 32px;
     top: 28px;
@@ -330,9 +327,6 @@
   .page__main .banners-row .banner-wrap:nth-child(2n) {
     padding-left: 1px;
   }
-  .page__main .banners-row .banner-wrap .second-banner {
-    height: 376px;
-  }
   .page__main .banners-row .banner-wrap .second-banner h1 {
     font-size: 24px;
   }
@@ -382,9 +376,6 @@
   }
 }
 @media screen and (min-width: 1000px) {
-  .page__main .main-banner-wrap .main-banner {
-    height: 478px;
-  }
   .page__main .main-banner-wrap .main-banner h1 {
     font-size: 64px;
     top: 45px;
@@ -409,9 +400,6 @@
   .page__main .main-banner-wrap .buttons a.book:before,
   .page__main .main-banner-wrap .buttons a.home:before {
     height: 66px;
-  }
-  .page__main .banners-row .banner-wrap .second-banner {
-    height: 490px;
   }
   .page__main .banners-row .banner-wrap .second-banner h1 {
     font-size: 32px;
@@ -475,9 +463,6 @@
   .page__main .main-banner-wrap {
     margin-top: 1px;
   }
-  .page__main .main-banner-wrap .main-banner {
-    height: 799px;
-  }
   .page__main .main-banner-wrap .main-banner h1 {
     font-size: 100px;
     top: 127px;
@@ -492,9 +477,6 @@
   }
   .page__main .main-banner-wrap .buttons {
     bottom: 81px;
-  }
-  .page__main .banners-row .banner-wrap .second-banner {
-    height: 940px;
   }
   .page__main .banners-row .banner-wrap .second-banner h1 {
     font-size: 52px;
