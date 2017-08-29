@@ -4,21 +4,16 @@ $(document).ready(function () {
     $('*[data-role="tabs"]').each(function(_, element) {
         var headers = $($(element).find('*[data-role="tab-headers"]')[0]).children('*[data-role="tab-header"]');
         
-        //этот кусок от стандартной логики, см. ниже
-        //var containersRoot = $($(element).find('*[data-role="tab-container"]')[0]);
+        var containersRoot = $($(element).find('*[data-role="tab-container"]')[0]);
 
         headers.on('click', function(e) {
             e.preventDefault();
             headers.removeClass("active");
             $(e.target).addClass("active");
-            /*
-            Здесь можно добавить логику для обработки нажатия на хедер таба.
-            
-            //это стандартная логика для переключения табов, не уверен, что здесь она понадобится.
             containersRoot.find("*[data-tab-id]").removeClass("active");
             var container = containersRoot.find('*[data-tab-id="' + e.target.getAttribute("data-tab-id") + '"]');
             container.addClass("active");
-            */
+            
         });
     });
 
